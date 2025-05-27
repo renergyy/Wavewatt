@@ -16,22 +16,32 @@
     .logo-placeholder { width:120px; height:40px; border:2px solid var(--dark); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--dark); }
     nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
     nav a { text-decoration:none; color:var(--dark); font-weight:bold; }
+
+    /* Hero */
     .hero { position:relative; height:60vh; background:url('img/waves.gif') no-repeat center/cover; display:flex; align-items:center; justify-content:center; }
     .hero::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
     .hero .texto { position:relative; z-index:2; text-align:center; color:var(--white); }
     .hero h1 { font-size:3rem; margin:0; }
     .hero p { font-size:1.2rem; margin-top:0.5rem; }
+
+    /* Secciones generales */
     section { padding:4rem 2rem; max-width:1100px; margin:auto; }
     section.alt { background:var(--white); }
     h2 { text-align:center; color:var(--accent); margin-bottom:2rem; }
+
+    /* Valores */
     .values { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; }
     .flip-card { perspective:1000px; }
     .flip-card-inner { position:relative; width:100%; height:250px; text-align:center; transition:transform .6s; transform-style:preserve-3d; }
     .flip-card:hover .flip-card-inner { transform:rotateY(180deg); }
     .flip-card-front, .flip-card-back { position:absolute; inset:0; backface-visibility:hidden; display:flex; align-items:center; justify-content:center; padding:1rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); background:var(--white); }
     .flip-card-back { transform:rotateY(180deg); background:var(--accent); color:var(--white); }
+
+    /* Splide carousels */
     .splide__slide img { border-radius:8px; width:100%; height:auto; }
     .splide__slide h4 { margin:.5rem 0 0; }
+
+    /* Noticias */
     #news { background:var(--white); }
     .news-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
     .news-card { background:var(--white); padding:1.5rem; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
@@ -40,12 +50,18 @@
     .news-card p { margin:0 0 .5rem; }
     .news-card iframe { width:100%; height:200px; border:none; border-radius:4px; margin-bottom:.5rem; }
     .news-card a { display:inline-block; text-decoration:none; color:var(--primary); font-weight:bold; }
+
+    /* Video */
     .video-container { text-align:center; margin-top:2rem; }
     .video-container iframe { width:100%; max-width:800px; height:450px; border:none; border-radius:8px; }
+
+    /* Contacto */
     .contact-map, .contact-form { margin-top:2rem; }
     .contact-form form { display:grid; gap:1rem; }
     .contact-form input, .contact-form textarea, .contact-form button { padding:.8rem; border-radius:4px; border:1px solid #ccc; font-size:1rem; }
     .contact-form button { background:var(--primary); color:var(--white); border:none; cursor:pointer; }
+
+    /* Footer */
     footer { background:var(--dark); color:var(--white); text-align:center; padding:1rem; }
   </style>
 </head>
@@ -64,6 +80,7 @@
     </ul>
   </nav>
 
+  <!-- Hero -->
   <section id="hero" class="hero">
     <div class="texto animate__animated animate__fadeInDown">
       <h1>Impulsando el futuro con energía del mar</h1>
@@ -71,14 +88,16 @@
     </div>
   </section>
 
+  <!-- About -->
   <section id="about" class="alt">
     <h2>¿Quiénes somos?</h2>
     <div class="grid-two">
-      <div><p>En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible. Somos ingenieros y expertos unidos por una visión: crear un futuro libre de emisiones.</p></div>
+      <div><p>En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible. Somos ingenieros comprometidos con la innovación y el respeto al medio ambiente.</p></div>
       <div><img src="img/equipo.jpg" alt="Equipo WaveWatt" style="width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
     </div>
   </section>
 
+  <!-- Valores -->
   <section id="values">
     <h2>Nuestra Misión, Visión y Valores</h2>
     <div class="values">
@@ -88,6 +107,7 @@
     </div>
   </section>
 
+  <!-- Equipo -->
   <section id="team" class="alt">
     <h2>Nuestro Equipo</h2>
     <div id="team-carousel" class="splide">
@@ -97,55 +117,64 @@
           <li class="splide__slide"><img src="img/valeria.jfif" alt="Valeria Lizet Landa"><h4>Valeria Lizet Landa</h4><p>Ing. Eléctrica & Máster URV.</p></li>
           <li class="splide__slide"><img src="img/karla.jfif" alt="Karla Andreina Vergel"><h4>Karla Andreina Vergel</h4><p>Ing. Eléctrica & Máster Industrial URV.</p></li>
           <li class="splide__slide"><img src="img/felipe.jfif" alt="Juan Felipe Gil"><h4>Juan Felipe Gil</h4><p>Ing. Eléctrica & Máster Industrial.</p></li>
-          <li class="splide__slide"><img src="img/javier.jpg" alt="Javier Pérez"><h4>Javier Pérez</h4><p>Ing. Energía & Máster Industrial.</p></li>
+          <li class="splide__slide"><img src="img/javi.jpg" alt="Javier Pérez"><h4>Javier Pérez</h4><p>Ing. Energía & Máster Industrial.</p></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="news" class="alt">
+  <!-- Noticias -->
+  <section id="news">
     <h2>Últimas Noticias</h2>
     <div class="news-cards">
+      <!-- Ganadores Engihack con card preview -->
       <div class="news-card">
-        <h4>Ganadores Engihack Catalunya 2023</h4>
-        <p class="date">2023</p>
-        <iframe src="https://www.fullsdenginyeria.cat/una-boia-generar-energia-amb-la-forca-de-les-ones-guanya-lengihack" title="Engihack Preview"></iframe>
-        <a href="https://www.fullsdenginyeria.cat/una-boia-generar-energia-amb-la-forca-de-les-ones-guanya-lengihack" class="read-more" target="_blank">Leer más</a>
+        <a href="https://www.fullsdenginyeria.cat/una-boia-generar-energia-amb-la-forca-de-les-ones-guanya-lengihack" target="_blank" style="text-decoration:none; color:inherit;">
+          <img src="img/engihack-preview.jpg" alt="Preview Engihack" style="width:100%; border-radius:4px; margin-bottom:.5rem;">
+          <h4>Ganadores Engihack Catalunya 2023</h4>
+          <p class="date">2023</p>
+        </a>
       </div>
       <div class="news-card">
-        <h4>De l’Engihack al futur</h4>
-        <p class="date">2023</p>
-        <p>Artículo de seguimiento tras la hackatón de Ingeniería.</p>
-        <a href="https://www.fullsdenginyeria.cat/de-lengihack-al-futur" class="read-more" target="_blank">Leer más</a>
+        <a href="https://www.fullsdenginyeria.cat/de-lengihack-al-futur" target="_blank" style="text-decoration:none; color:inherit;">
+          <h4>De l’Engihack al futur</h4>
+          <p class="date">2023</p>
+          <p>Artículo de seguimiento tras la hackatón de Ingeniería.</p>
+        </a>
       </div>
       <div class="news-card">
-        <h4>WaveWatt S.L. – Premis Idees Innovadoras</h4>
-        <p class="date">2024</p>
-        <p>Finalistas top 10 entre 300 proyectos.</p>
-        <a href="https://www.linkedin.com/posts/urvempren_WaveWatt%20S.L.%20-premiideasinnovadoras-innovacioej-activity-7201152956719595521-TK8t?utm_source=share&utm_medium=member_desktop&rcm=ACoAADNtG_UBNV6C3Sj2S5rEG2lYRbdAx1Sh7rs" class="read-more" target="_blank">Leer más</a>
+        <a href="https://www.linkedin.com/posts/urvempren_WaveWatt%20S.L.%20-premiideasinnovadoras-innovacioej-activity-7201152956719595521-TK8t?utm_source=share&utm_medium=member_desktop&rcm=ACoAADNtG_UBNV6C3Sj2S5rEG2lYRbdAx1Sh7rs" target="_blank" style="text-decoration:none; color:inherit;">
+          <h4>WaveWatt S.L. – Premis Idees Innovadoras</h4>
+          <p class="date">2024</p>
+          <p>Finalistas top 10 entre 300 proyectos.</p>
+        </a>
       </div>
       <div class="news-card">
-        <h4>Vídeo: Pau Sabater García</h4>
-        <p class="date">2024</p>
-        <p>Enlace al vídeo de presentación.</p>
-        <a href="https://www.youtube.com/watch?v=xfHAqZkzDG4&ab_channel=PauSabaterGarcia" class="read-more" target="_blank">Ver video</a>
+        <a href="https://www.youtube.com/watch?v=xfHAqZkzDG4&ab_channel=PauSabaterGarcia" target="_blank" style="text-decoration:none; color:inherit;">
+          <h4>Vídeo: Pau Sabater García</h4>
+          <p class="date">2024</p>
+          <p>Enlace al vídeo de presentación.</p>
+        </a>
       </div>
       <div class="news-card">
-        <h4>Premis Emprèn Tarragona 2024</h4>
-        <p class="date">2024</p>
-        <p>Diputació de Tarragona premia proyectos emprendedores.</p>
-        <a href="https://tarragonadigital.com/societat/premis-empren-diputacio-tarragona-desena-projectes-emprenedors_2064367_102.html" class="read-more" target="_blank">Leer más</a>
+        <a href="https://tarragonadigital.com/societat/premis-empren-diputacio-tarragona-desena-projectes-emprenedors_2064367_102.html" target="_blank" style="text-decoration:none; color:inherit;">
+          <h4>Premis Emprèn Tarragona 2024</h4>
+          <p class="date">2024</p>
+          <p>Diputació de Tarragona premia proyectos emprendedores.</p>
+        </a>
       </div>
       <div class="news-card">
-        <h4>URV Consell Social premia ideas innovadoras</h4>
-        <p class="date">2024</p>
-        <p>Reconeixement als guardonats i guardonades durant l’any 2024.</p>
-        <a href="https://diaridigital.urv.cat/el-consell-social-de-la-urv-premia-les-idees-emprenedores-mes-innovadores/" class="read-more" target="_blank">Leer más</a>
+        <a href="https://diaridigital.urv.cat/el-consell-social-de-la-urv-premia-les-idees-emprenedores-mes-innovadores/" target="_blank" style="text-decoration:none; color:inherit;">
+          <h4>URV Consell Social premia ideas innovadoras</h4>
+          <p class="date">2024</p>
+          <p>Reconeixement als guardonats i guardonades durant l’any 2024.</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="awards">
+  <!-- Premios -->
+  <section id="awards" class="alt">
     <h2>Premios y Reconocimientos</h2>
     <div id="awards-carousel" class="splide">
       <div class="splide__track">
@@ -162,11 +191,13 @@
     </div>
   </section>
 
-  <section id="video" class="alt">
+  <!-- Vídeo -->
+  <section id="video">
     <h2>Vídeo</h2>
     <div class="video-container"><iframe src="https://www.youtube.com/embed/xfHAqZkzDG4" allowfullscreen loading="lazy"></iframe></div>
   </section>
 
+  <!-- Contacto -->
   <section id="contact" class="alt">
     <h2>Contacto</h2>
     <p style="text-align:center;">Tarragona, España</p>
