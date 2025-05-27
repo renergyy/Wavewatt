@@ -1,190 +1,196 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WaveWatt | Por una energía más limpia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Fuentes y estilos externos -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+
+  <!-- Estilos internos -->
   <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4fcff;
-      color: #003049;
+    :root {
+      --primary: #0077b6;
+      --accent:  #00b4d8;
+      --dark:    #03045e;
+      --light:   #caf0f8;
+      --white:   #ffffff;
     }
-    header {
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
-      color: white;
-      padding: 5rem 2rem;
-      text-align: center;
-      position: relative;
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:'Roboto',sans-serif; background:var(--light); color:var(--dark); scroll-behavior:smooth; }
+    nav { background:var(--white); padding:1rem 2rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; }
+    .logo-placeholder { width:120px; height:40px; border:2px solid var(--dark); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--dark); }
+    nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
+    nav a { text-decoration:none; color:var(--dark); font-weight:bold; }
+
+    /* Hero con vídeo */
+    .hero { position:relative; text-align:center; color:var(--white); }
+    .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    .hero iframe { width:100%; height:60vh; object-fit:cover; }
+    .hero .texto { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:2; }
+    .hero h1 { font-size:3rem; margin:0; }
+    .hero p { font-size:1.2rem; margin-top:0.5rem; }
+
+    section { padding:4rem 2rem; max-width:1100px; margin:auto; }
+    section.alt { background:var(--white); }
+    h2 { text-align:center; color:var(--accent); margin-bottom:2rem; }
+
+    /* Flip cards Valores */
+    .values { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; }
+    .flip-card { perspective:1000px; }
+    .flip-card-inner { position:relative; width:100%; height:250px; text-align:center; transition:transform 0.6s; transform-style:preserve-3d; }
+    .flip-card:hover .flip-card-inner { transform:rotateY(180deg); }
+    .flip-card-front, .flip-card-back {
+      position:absolute; inset:0; backface-visibility:hidden; display:flex; align-items:center; justify-content:center; padding:1rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); background:var(--white);
     }
-    header img.logo {
-      max-width: 120px;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    header p {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-    }
-    .buttons {
-      margin-top: 2rem;
-    }
-    .button {
-      background-color: #00a896;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin: 0 0.5rem;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background-color: #028090;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      color: #0077b6;
-      margin-bottom: 1rem;
-    }
-    .awards img {
-      height: 60px;
-      margin: 1rem;
-      vertical-align: middle;
-    }
-    .team {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background-color: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-    .card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    .card h4 {
-      margin: 0 0 0.5rem;
-      color: #023e8a;
-    }
-    .card p {
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-    .team-photo {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .team-photo img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    .video {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .video iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      border-radius: 8px;
-    }
-    footer {
-      background-color: #003049;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
+    .flip-card-back { transform:rotateY(180deg); background:var(--accent); color:var(--white); }
+
+    /* Carousel equipo */
+    .splide__slide img { border-radius:8px; width:100%; height:auto; }
+    .splide__slide h4 { margin:0.5rem 0 0; }
+
+    /* Timeline premios */
+    .timeline { position:relative; padding:2rem 0; }
+    .timeline::after { content:""; position:absolute; top:0; left:50%; width:4px; height:100%; background:var(--accent); transform:translateX(-50%); }
+    .event { position:relative; width:50%; padding:1rem 2rem; }
+    .event:nth-child(odd) { left:0; text-align:right; }
+    .event:nth-child(even) { left:50%; }
+    .event::before { content:""; position:absolute; top:1rem; width:16px; height:16px; background:var(--white); border:4px solid var(--accent); border-radius:50%; }
+    .event:nth-child(odd)::before { right:-8px; }
+    .event:nth-child(even)::before { left:-8px; }
+
+    /* Contacto */
+    .contact-map, .contact-form { margin-top:2rem; }
+    .contact-form form { display:grid; gap:1rem; }
+    .contact-form input, .contact-form textarea, .contact-form button { padding:0.8rem; border-radius:4px; border:1px solid #ccc; font-size:1rem; }
+    .contact-form button { background:var(--primary); color:var(--white); border:none; cursor:pointer; }
   </style>
 </head>
 <body>
-  <header>
-    <img src="img/logo.png" class="logo" alt="WaveWatt logo" />
-    <h1>WaveWatt</h1>
-    <p>Por una energía más limpia</p>
-    <div class="buttons">
-      <a href="mailto:therenergy@gmail.com" class="button">Contáctanos</a>
-      <a href="#" class="button">Únete al cambio</a>
+  <nav>
+    <div class="logo-placeholder">WaveWatt</div>
+    <ul>
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#about">Quiénes somos</a></li>
+      <li><a href="#values">Valores</a></li>
+      <li><a href="#team">Equipo</a></li>
+      <li><a href="#awards">Premios</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero con vídeo embebido -->
+  <section id="hero" class="hero">
+    <iframe src="https://www.youtube.com/embed/xfHAqZkzDG4?autoplay=1&mute=1&loop=1&playlist=xfHAqZkzDG4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="texto animate__animated animate__fadeInDown">
+      <h1>Impulsando el futuro con energía del mar</h1>
+      <p>Innovación. Sostenibilidad. Acción.</p>
     </div>
-  </header>
-  <section>
+  </section>
+
+  <!-- Sobre nosotros -->
+  <section id="about" class="alt">
     <h2>¿Quiénes somos?</h2>
-    <p>Convertimos energía de las olas en electricidad limpia y sostenible. En WaveWatt, apostamos por un futuro donde la innovación tecnológica se combine con el respeto por el medio ambiente.</p>
+    <div class="grid-two">
+      <div>
+        <p>En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible. Somos ingenieros y expertos unidos por una visión: crear un futuro libre de emisiones.</p>
+      </div>
+      <div><img src="assets/team/equipo.jpg" alt="Equipo WaveWatt" style="width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
+    </div>
   </section>
-  <section>
+
+  <!-- Valores: Flip cards -->
+  <section id="values">
+    <h2>Nuestra Misión, Visión y Valores</h2>
+    <div class="values">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><h3>Misión</h3></div>
+          <div class="flip-card-back"><p>Acelerar la transición energética mediante soluciones marinas innovadoras y responsables.</p></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><h3>Visión</h3></div>
+          <div class="flip-card-back"><p>Ser líderes globales en energías oceánicas limpias, empoderando comunidades.</p></div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front"><h3>Valores</h3></div>
+          <div class="flip-card-back"><p>Innovación, sostenibilidad, colaboración y excelencia técnica.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipo: Carousel -->
+  <section id="team" class="alt">
+    <h2>Nuestro Equipo</h2>
+    <div id="team-carousel" class="splide">
+      <div class="splide__track"><ul class="splide__list">
+        <li class="splide__slide">
+          <img src="assets/team/pau.jpg" alt="Pau Sabater"><h4>Pau Sabater</h4><p>Ing. Industrial, UPC & Máster Automoción.</p>
+        </li>
+        <li class="splide__slide">
+          <img src="assets/team/valeria.jpg" alt="Valeria Lizet Landa"><h4>Valeria Lizet Landa</h4><p>Ing. Eléctrica & Máster URV.</p>
+        </li>
+        <li class="splide__slide">
+          <img src="assets/team/karla.jpg" alt="Karla Andreina Vergel"><h4>Karla Andreina Vergel</h4><p>Ing. Eléctrica & Máster Industrial URV.</p>
+        </li>
+        <li class="splide__slide">
+          <img src="assets/team/juan.jpg" alt="Juan Felipe Gil"><h4>Juan Felipe Gil</h4><p>Ing. Eléctrica & Máster Industrial.</p>
+        </li>
+        <li class="splide__slide">
+          <img src="assets/team/javier.jpg" alt="Javier Pérez"><h4>Javier Pérez</h4><p>Ing. Energía & Máster Industrial.</p>
+        </li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- Premios: Timeline -->
+  <section id="awards">
     <h2>Premios y Reconocimientos</h2>
-    <div class="awards">
-      <img src="img/logo-premis-gresol.png" alt="Premis Gresol" />
-      <img src="img/logo-premis-empren.png" alt="Premis Empren Tarragona" />
-      <img src="img/logo-engihack.png" alt="Hackaton Engihack Catalunya" />
-    </div>
-    <p>Reconocidos por nuestra innovación en sostenibilidad con los Premis Gresol (2023), Premis Empren Tarragona (2022) y el Hackaton Engihack Catalunya (2021).</p>
-  </section>
-  <section>
-    <h2>Equipo</h2>
-    <div class="team">
-      <div class="card">
-        <img src="img/pau.jpg" alt="Pau Sabater" />
-        <h4>Pau Sabater</h4>
-        <p>Graduado en Ingeniería Industrial por la UPC...</p>
-      </div>
-      <div class="card">
-        <h4>Valeria Lizet Landa</h4>
-        <p>Ingeniera eléctrica y estudiante de máster en la URV...</p>
-      </div>
-      <div class="card">
-        <h4>Karla Andreina Vergel</h4>
-        <p>Graduada en Ingeniería Eléctrica y estudiante del máster industrial...</p>
-      </div>
-      <div class="card">
-        <h4>Juan Felipe Gil</h4>
-        <p>Ingeniero eléctrico con formación de máster en curso...</p>
-      </div>
-      <div class="card">
-        <img src="img/equipo.jpg" alt="Javier Pérez Noguera" />
-        <h4>Javier Pérez Noguera</h4>
-        <p>Graduado en Ingeniería de la Energía por la UPV...</p>
-      </div>
-    </div>
-    <div class="team-photo">
-      <img src="img/equipo.jpg" alt="Equipo WaveWatt celebrando premio" />
+    <div class="timeline">
+      <div class="event"><h4>2021</h4><p>Hackaton Engihack Catalunya</p></div>
+      <div class="event"><h4>2022</h4><p>Premis Empren Tarragona</p></div>
+      <div class="event"><h4>2023</h4><p>Premis Gresol</p></div>
     </div>
   </section>
-  <section class="video">
-    <h2>Conócenos mejor</h2>
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
-  </section>
-  <section>
+
+  <!-- Contacto: Mapa y formulario -->
+  <section id="contact" class="alt">
     <h2>Contacto</h2>
-    <p>¿Quieres saber más? Escríbenos a <a href="mailto:therenergy@gmail.com">therenergy@gmail.com</a></p>
+    <p style="text-align:center;">Carrer Sant Carles i Sant Josep 20, Piso 1, 43201 Reus, Tarragona</p>
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.123456789012!2d1.12567890!3d41.1523049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a3456789abcdef%3A0xabcdef1234567890!2sCarrer%20Sant%20Carles%20i%20Sant%20Josep%2C%2020%2C%2043201%20Reus!5e0!3m2!1ses!2ses!4v0000000000000" 
+        width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Nombre" required>
+        <input type="email" name="_replyto" placeholder="Correo electrónico" required>
+        <textarea name="message" rows="4" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
   </section>
-  <footer>
+
+  <footer style="background:var(--dark);color:var(--white);text-align:center;padding:1rem;">
     <p>&copy; 2025 WaveWatt. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#team-carousel',{ type:'loop', perPage:3, gap:'1rem', autoplay:true }).mount();
+      ScrollReveal().reveal('section',{ distance:'50px', duration:800, origin:'bottom', interval:200 });
+    });
+  </script>
 </body>
 </html>
