@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WaveWatt | Por una energía más limpia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4fcff;
+      color: #003049;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header img.logo {
+      max-width: 120px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+    .buttons {
+      margin-top: 2rem;
+    }
+    .button {
+      background-color: #00a896;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background-color: #028090;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+    .awards img {
+      height: 60px;
+      margin: 1rem;
+      vertical-align: middle;
+    }
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .card h4 {
+      margin: 0 0 0.5rem;
+      color: #023e8a;
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .team-photo {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .team-photo img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .video {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .video iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #003049;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" class="logo" alt="WaveWatt logo" />
+    <h1>WaveWatt</h1>
+    <p>Por una energía más limpia</p>
+    <div class="buttons">
+      <a href="mailto:therenergy@gmail.com" class="button">Contáctanos</a>
+      <a href="#" class="button">Únete al cambio</a>
+    </div>
+  </header>
+  <section>
+    <h2>¿Quiénes somos?</h2>
+    <p>Convertimos energía de las olas en electricidad limpia y sostenible. En WaveWatt, apostamos por un futuro donde la innovación tecnológica se combine con el respeto por el medio ambiente.</p>
+  </section>
+  <section>
+    <h2>Premios y Reconocimientos</h2>
+    <div class="awards">
+      <img src="img/logo-premis-gresol.png" alt="Premis Gresol" />
+      <img src="img/logo-premis-empren.png" alt="Premis Empren Tarragona" />
+      <img src="img/logo-engihack.png" alt="Hackaton Engihack Catalunya" />
+    </div>
+    <p>Reconocidos por nuestra innovación en sostenibilidad con los Premis Gresol (2023), Premis Empren Tarragona (2022) y el Hackaton Engihack Catalunya (2021).</p>
+  </section>
+  <section>
+    <h2>Equipo</h2>
+    <div class="team">
+      <div class="card">
+        <img src="img/pau.jpg" alt="Pau Sabater" />
+        <h4>Pau Sabater</h4>
+        <p>Graduado en Ingeniería Industrial por la UPC...</p>
+      </div>
+      <div class="card">
+        <h4>Valeria Lizet Landa</h4>
+        <p>Ingeniera eléctrica y estudiante de máster en la URV...</p>
+      </div>
+      <div class="card">
+        <h4>Karla Andreina Vergel</h4>
+        <p>Graduada en Ingeniería Eléctrica y estudiante del máster industrial...</p>
+      </div>
+      <div class="card">
+        <h4>Juan Felipe Gil</h4>
+        <p>Ingeniero eléctrico con formación de máster en curso...</p>
+      </div>
+      <div class="card">
+        <img src="img/equipo.jpg" alt="Javier Pérez Noguera" />
+        <h4>Javier Pérez Noguera</h4>
+        <p>Graduado en Ingeniería de la Energía por la UPV...</p>
+      </div>
+    </div>
+    <div class="team-photo">
+      <img src="img/equipo.jpg" alt="Equipo WaveWatt celebrando premio" />
+    </div>
+  </section>
+  <section class="video">
+    <h2>Conócenos mejor</h2>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" allowfullscreen></iframe>
+  </section>
+  <section>
+    <h2>Contacto</h2>
+    <p>¿Quieres saber más? Escríbenos a <a href="mailto:therenergy@gmail.com">therenergy@gmail.com</a></p>
+  </section>
+  <footer>
+    <p>&copy; 2025 WaveWatt. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
