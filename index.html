@@ -8,40 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
-
   <style>
     :root { --primary:#0077b6; --accent:#00b4d8; --dark:#03045e; --light:#caf0f8; --white:#ffffff; }
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; }
     body { margin:0; font-family:'Roboto',sans-serif; background:var(--light); color:var(--dark); scroll-behavior:smooth; }
     nav { background:var(--white); padding:1rem 2rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; }
     .logo-placeholder { width:120px; height:40px; border:2px solid var(--dark); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--dark); }
     nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
     nav a { text-decoration:none; color:var(--dark); font-weight:bold; }
-
-    /* Hero */
     .hero { position:relative; height:60vh; background:url('img/waves.gif') no-repeat center/cover; display:flex; align-items:center; justify-content:center; }
     .hero::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
     .hero .texto { position:relative; z-index:2; text-align:center; color:var(--white); }
     .hero h1 { font-size:3rem; margin:0; }
     .hero p { font-size:1.2rem; margin-top:0.5rem; }
-
     section { padding:4rem 2rem; max-width:1100px; margin:auto; }
     section.alt { background:var(--white); }
     h2 { text-align:center; color:var(--accent); margin-bottom:2rem; }
-
-    /* Valores */
     .values { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; }
     .flip-card { perspective:1000px; }
     .flip-card-inner { position:relative; width:100%; height:250px; text-align:center; transition:transform .6s; transform-style:preserve-3d; }
     .flip-card:hover .flip-card-inner { transform:rotateY(180deg); }
     .flip-card-front, .flip-card-back { position:absolute; inset:0; backface-visibility:hidden; display:flex; align-items:center; justify-content:center; padding:1rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); background:var(--white); }
     .flip-card-back { transform:rotateY(180deg); background:var(--accent); color:var(--white); }
-
-    /* Carruseles */
     .splide__slide img { border-radius:8px; width:100%; height:auto; }
     .splide__slide h4 { margin:.5rem 0 0; }
-
-    /* Noticias */
     #news { background:var(--white); }
     .news-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
     .news-card { background:var(--white); padding:1.5rem; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
@@ -49,18 +39,13 @@
     .news-card .date { font-size:.85rem; color:var(--accent); margin-bottom:.5rem; }
     .news-card p { margin:0 0 .5rem; }
     .news-card iframe { width:100%; height:200px; border:none; border-radius:4px; margin-bottom:.5rem; }
-    .news-card a { text-decoration:none; color:var(--primary); font-weight:bold; }
-
-    /* Video */
+    .news-card a { display:inline-block; text-decoration:none; color:var(--primary); font-weight:bold; }
     .video-container { text-align:center; margin-top:2rem; }
     .video-container iframe { width:100%; max-width:800px; height:450px; border:none; border-radius:8px; }
-
-    /* Contacto */
     .contact-map, .contact-form { margin-top:2rem; }
     .contact-form form { display:grid; gap:1rem; }
     .contact-form input, .contact-form textarea, .contact-form button { padding:.8rem; border-radius:4px; border:1px solid #ccc; font-size:1rem; }
     .contact-form button { background:var(--primary); color:var(--white); border:none; cursor:pointer; }
-
     footer { background:var(--dark); color:var(--white); text-align:center; padding:1rem; }
   </style>
 </head>
@@ -109,8 +94,4 @@
       <div class="splide__track"><ul class="splide__list">
         <li class="splide__slide"><img src="img/pau.jfif" alt="Pau Sabater"><h4>Pau Sabater</h4><p>Ing. Industrial, UPC & Máster Automoción.</p></li>
         <li class="splide__slide"><img src="img/valeria.jfif" alt="Valeria Lizet Landa"><h4>Valeria Lizet Landa</h4><p>Ing. Eléctrica & Máster URV.</p></li>
-        <li class="splide__slide"><img src="img/karla.jfif" alt="Karla Andreina Vergel"><h4>Karla Andreina Vergel</h4><p>Ing. Eléctrica & Máster Industrial URV.</p></li>
-        <li class="splide__slide"><img src="img/felipe.jfif" alt="Juan Felipe Gil"><h4>Juan Felipe Gil</h4><p>Ing. Eléctrica & Máster Industrial.</p></li>
-        <li class="splide__slide"><img src="img/javier.jpg" alt="Javier Pérez"><h4>Javi
-
-
+        <li class="splide
