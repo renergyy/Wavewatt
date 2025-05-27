@@ -8,29 +8,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+
+  <!-- Estilos internos -->
   <style>
-    :root { --primary:#0077b6; --accent:#00b4d8; --dark:#03045e; --light:#caf0f8; --white:#ffffff; }
-    *{box-sizing:border-box;} body{margin:0;font-family:'Roboto',sans-serif;background:var(--light);color:var(--dark);scroll-behavior:smooth;}
-    nav{background:var(--white);padding:1rem 2rem;box-shadow:0 2px 8px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;}
-    .logo-placeholder{width:120px;height:40px;border:2px solid var(--dark);display:flex;align-items:center;justify-content:center;font-weight:bold;color:var(--dark);}
-    nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0;} nav a{text-decoration:none;color:var(--dark);font-weight:bold;}
-    .hero{position:relative;height:60vh;background:url('img/waves.gif') no-repeat center/cover;display:flex;align-items:center;justify-content:center;}
-    .hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.4);}
-    .hero .texto{position:relative;z-index:2;text-align:center;color:var(--white);} .hero h1{font-size:3rem;margin:0;} .hero p{font-size:1.2rem;margin-top:0.5rem;}
-    section{padding:4rem 2rem;max-width:1100px;margin:auto;} section.alt{background:var(--white);} h2{text-align:center;color:var(--accent);margin-bottom:2rem;}
-    .values{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}
-    .flip-card{perspective:1000px;} .flip-card-inner{position:relative;width:100%;height:250px;text-align:center;transition:transform .6s;transform-style:preserve-3d;}
-    .flip-card:hover .flip-card-inner{transform:rotateY(180deg);} .flip-card-front,.flip-card-back{position:absolute;inset:0;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;padding:1rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);background:var(--white);}
-    .flip-card-back{transform:rotateY(180deg);background:var(--accent);color:var(--white);}
-    .splide__slide img{border-radius:8px;width:100%;height:auto;} .splide__slide h4{margin:.5rem 0 0;}
-    .timeline{position:relative;padding:2rem 0;} .timeline::after{content:'';position:absolute;top:0;left:50%;width:4px;height:100%;background:var(--accent);transform:translateX(-50%);}
-    .event{position:relative;width:50%;padding:2rem;display:flex;flex-direction:column;align-items:center;} .event:nth-child(odd){left:0;text-align:right;} .event:nth-child(even){left:50%;}
-    .event img{max-width:120px;margin-bottom:1rem;} .event h4{margin:.5rem 0 0;font-size:1.2rem;} .event p{margin:.25rem 0 0;font-size:.95rem;}
-    .event::before{content:'';position:absolute;top:3.5rem;width:16px;height:16px;background:var(--white);border:4px solid var(--accent);border-radius:50%;}
-    .event:nth-child(odd)::before{right:-8px;} .event:nth-child(even)::before{left:-8px;}
-    .video-container{text-align:center;margin-top:2rem;} .video-container iframe{width:100%;max-width:800px;height:450px;border:none;border-radius:8px;}
-    .contact-map,.contact-form{margin-top:2rem;} .contact-form form{display:grid;gap:1rem;} .contact-form input,.contact-form textarea,.contact-form button{padding:.8rem;border-radius:4px;border:1px solid #ccc;font-size:1rem;}
-    .contact-form button{background:var(--primary);color:var(--white);border:none;cursor:pointer;} footer{background:var(--dark);color:var(--white);text-align:center;padding:1rem;}
+    :root {
+      --primary: #0077b6;
+      --accent:  #00b4d8;
+      --dark:    #03045e;
+      --light:   #caf0f8;
+      --white:   #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:'Roboto',sans-serif; background:var(--light); color:var(--dark); scroll-behavior:smooth; }
+    nav { background:var(--white); padding:1rem 2rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; }
+    .logo-placeholder { width:120px; height:40px; border:2px solid var(--dark); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--dark); }
+    nav ul { list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
+    nav a { text-decoration:none; color:var(--dark); font-weight:bold; }
+
+    /* Hero con gif de olas */
+    .hero { position:relative; height:60vh; background: url('img/waves.gif') no-repeat center/cover; display:flex; align-items:center; justify-content:center; }
+    .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    .hero .texto { position:relative; z-index:2; text-align:center; color:var(--white); }
+    .hero h1 { font-size:3rem; margin:0; }
+    .hero p { font-size:1.2rem; margin-top:0.5rem; }
+
+    section { padding:4rem 2rem; max-width:1100px; margin:auto; }
+    section.alt { background:var(--white); }
+    h2 { text-align:center; color:var(--accent); margin-bottom:2rem; }
+
+    /* Flip cards Valores */
+    .values { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; }
+    .flip-card { perspective:1000px; }
+    .flip-card-inner { position:relative; width:100%; height:250px; text-align:center; transition:transform 0.6s; transform-style:preserve-3d; }
+    .flip-card:hover .flip-card-inner { transform:rotateY(180deg); }
+    .flip-card-front, .flip-card-back { position:absolute; inset:0; backface-visibility:hidden; display:flex; align-items:center; justify-content:center; padding:1rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); background:var(--white); }
+    .flip-card-back { transform:rotateY(180deg); background:var(--accent); color:var(--white); }
+
+    /* Carousel equipo y premios */
+    .splide__slide img { border-radius:8px; width:100%; height:auto; }
+    .splide__slide h4 { margin:0.5rem 0 0; }
+
+    /* Estilos específicos para premios */
+    #awards { background:#fff; }
+    #awards .splide__slide { text-align:center; padding:1rem; }
+    #awards .splide__slide img { max-width:200px; margin:auto; }
+
+    /* Contenedor video adicional */
+    .video-container { text-align:center; margin-top:2rem; }
+    .video-container iframe { width:100%; max-width:800px; height:450px; border:none; border-radius:8px; }
+
+    /* Contacto */
+    .contact-map, .contact-form { margin-top:2rem; }
+    .contact-form form { display:grid; gap:1rem; }
+    .contact-form input, .contact-form textarea, .contact-form button { padding:0.8rem; border-radius:4px; border:1px solid #ccc; font-size:1rem; }
+    .contact-form button { background:var(--primary); color:var(--white); border:none; cursor:pointer; }
+    footer { background:var(--dark); color:var(--white); text-align:center; padding:1rem; }
   </style>
 </head>
 <body>
@@ -47,6 +79,7 @@
     </ul>
   </nav>
 
+  <!-- Hero con gif de olas -->
   <section id="hero" class="hero">
     <div class="texto animate__animated animate__fadeInDown">
       <h1>Impulsando el futuro con energía del mar</h1>
@@ -54,14 +87,18 @@
     </div>
   </section>
 
-  <section id="about" class="alt">
+  <!-- Sobre nosotros -->
+  <section id="#about" class="alt">
     <h2>¿Quiénes somos?</h2>
     <div class="grid-two">
-      <div><p>En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible. Somos ingenieros y expertos unidos por una visión: crear un futuro libre de emisiones.</p></div>
-      <div><img src="img/equipo.jpg" alt="Equipo WaveWatt" style="width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
+      <div>
+        <p>En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible. Somos ingenieros y expertos unidos por una visión: crear un futuro libre de emisiones.</p>
+      </div>
+      <div><img src="img/equipo.jpg" alt="Equipo WaveWatt" style="width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div>
     </div>
   </section>
 
+  <!-- Valores -->
   <section id="values">
     <h2>Nuestra Misión, Visión y Valores</h2>
     <div class="values">
@@ -86,6 +123,7 @@
     </div>
   </section>
 
+  <!-- Equipo: Carousel -->
   <section id="team" class="alt">
     <h2>Nuestro Equipo</h2>
     <div id="team-carousel" class="splide">
@@ -99,40 +137,18 @@
     </div>
   </section>
 
-  <!-- Premios: Timeline -->
+  <!-- Premios: Carrusel -->
   <section id="awards">
     <h2>Premios y Reconocimientos</h2>
-    <div class="timeline">
-      <div class="event">
-        <img src="img/engihacklogo.jpg" alt="Engihack 2023">
-        <h4>2023 – Ganadores Engihack</h4>
-        <p>Hackaton Engihack Catalunya</p>
-      </div>
-      <div class="event">
-        <img src="img/premioideasinnovadoras.png" alt="Premi Idees Innovadores 2024">
-        <h4>2024 – Finalistas Top 10</h4>
-        <p>Premi Idees Innovadores Isabel P. Trabal (300 participantes)</p>
-      </div>
-      <div class="event">
-        <img src="img/URVconsellsocial.png" alt="URV Consell Social 2024">
-        <h4>2024 – Ganadores URV Consell Social</h4>
-        <p>Concurso Ideas Innovadoras URV</p>
-      </div>
-      <div class="event">
-        <img src="img/startsudstudio.png" alt="Startsudstudio 2024">
-        <h4>2024 – Acuerdo Startsudstudio</h4>
-        <p>Primer acuerdo con incubadora</p>
-      </div>
-      <div class="event">
-        <img src="img/premis_empren.jpg" alt="Premis Emprèn Tarragona 2024">
-        <h4>2024 – Ganadores Emprèn Tarragona</h4>
-        <p>Diputació de Tarragona</p>
-      </div>
-      <div class="event">
-        <img src="img/premisgresol.jpg" alt="Premis Gresol 2025">
-        <h4>2025 – Ganadores Gresol</h4>
-        <p>Premis Gresol Jove</p>
-      </div>
+    <div id="awards-carousel" class="splide">
+      <div class="splide__track"><ul class="splide__list">
+        <li class="splide__slide"><img src="img/engihacklogo.jpg" alt="Engihack 2023"><h4>Engihack 2023</h4><p>Ganadores Engihack Catalunya.</p></li>
+        <li class="splide__slide"><img src="img/premioideasinnovadoras.png" alt="Ideas Innovadoras 2024"><h4>Premis Idees Innovadores 2024</h4><p>Finalistas top 10 entre 300 proyectos.</p></li>
+        <li class="splide__slide"><img src="img/URVconsellsocial.png" alt="URV Consell Social 2024"><h4>URV Consell Social 2024</h4><p>Ganadores concurso Ideas Innovadoras.</p></li>
+        <li class="splide__slide"><img src="img/startsudstudio.png" alt="Startsudstudio 2024"><h4>Startsudstudio 2024</h4><p>Primer acuerdo con incubadora.</p></li>
+        <li class="splide__slide"><img src="img/premis_empren.jpg" alt="Premis Emprèn Tarragona 2024"><h4>Premis Emprèn Tarragona 2024</h4><p>Ganadores Entrenamiento Emprendedor.</p></li>
+        <li class="splide__slide"><img src="img/premisgresol.jpg" alt="Premis Gresol Jove 2025"><h4>Premis Gresol Jove 2025</h4><p>Ganadores Gresol Jove.</p></li>
+      </ul></div>
     </div>
   </section>
 
@@ -147,9 +163,12 @@
   <!-- Contacto: Mapa y formulario -->
   <section id="contact" class="alt">
     <h2>Contacto</h2>
-    <p style="text-align:center;">Carrer Sant Carles i Sant Josep 20, Piso 1, 43201 Reus, Tarragona</p>
+    <p style="text-align:center;">Tarragona, España</p>
     <div class="contact-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.123456789012!2d1.12567890!3d41.1523049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a3456789abcdef%3A0xabcdef1234567890!2sCarrer%20Sant%20Carles%20i%20Sant%20Josep%2C%2020%2C%2043201%20Reus!5e0!3m2!1ses!2ses!4v0000000000000" width="100%" height="300" style="border:0;border-radius:8px;" allowfullscreen loading="lazy"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.115652291344!2d1.238813415102004!3d41.11888207800382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a3519cdef0123%3A0xabcdef1234567890!2sTarragona!5e0!3m2!1ses!2ses!4v0000000000000"
+        width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen loading="lazy">
+      </iframe>
     </div>
     <div class="contact-form">
       <form action="https://formspree.io/f/yourformid" method="POST">
@@ -161,6 +180,7 @@
     </div>
   </section>
 
+  <!-- Pie de página -->
   <footer>
     <p>&copy; 2025 WaveWatt. Todos los derechos reservados.</p>
   </footer>
@@ -170,9 +190,11 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      new Splide('#team-carousel',{ type:'loop', perPage:3, gap:'1rem', autoplay:true }).mount();
-      ScrollReveal().reveal('section',{ distance:'50px', duration:800, origin:'bottom', interval:200 });
+      new Splide('#team-carousel', { type:'loop', perPage:3, gap:'1rem', autoplay:true }).mount();
+      new Splide('#awards-carousel', { type:'loop', perPage:3, gap:'1rem', autoplay:true }).mount();
+      ScrollReveal().reveal('section', { distance:'50px', duration:800, origin:'bottom', interval:200 });
     });
   </script>
 </body>
 </html>
+
