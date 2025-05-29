@@ -248,7 +248,9 @@
     <select id="language-select" aria-label="Seleccione idioma">
       <option value="es">ES</option>
       <option value="en">EN</option>
+      <option value="ca">CA</option>
     </select>
+
   </nav>
 
   <!-- Hero -->
@@ -486,19 +488,23 @@
     });
 
     // Cambio de idioma
-    const select = document.getElementById('language-select');
-    select.addEventListener('change', () => {
-      if (select.value === 'en') {
-        window.location.href = window.location.origin + window.location.pathname.replace(/\/$/, '') + '/en/index.html';
-      } else {
-        window.location.href = window.location.origin + '/';
-      }
-    });
-
-    // Si ya estamos en /en/, que el selector marque EN
-    if (window.location.pathname.startsWith('/en/')) {
-      select.value = 'en';
+    // Cambio de idioma
+  const select = document.getElementById('language-select');
+  select.addEventListener('change', () => {
+    if (select.value === 'es') {
+      window.location.href = window.location.origin + '/';
+    } else if (select.value === 'en') {
+      window.location.href = window.location.origin + '/en/index.html';
+    } else if (select.value === 'ca') {
+      window.location.href = window.location.origin + '/ca/index.html';
     }
+  });
+
+  // Al cargar, marcar el idioma activo
+  const path = window.location.pathname;
+  if (path.startsWith('/en/')) select.value = 'en';
+  else if (path.startsWith('/ca/')) select.value = 'ca';
+
   </script>
 </body>
 </html>
