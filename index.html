@@ -3,184 +3,59 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WaveWatt | Por una energía más limpia</title>
-  <!-- Fuentes y estilos externos -->
+  <title data-i18n="meta.title">WaveWatt | Por una energía más limpia</title>
+  <!-- Google Fonts & Splide / Animate -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"/>
   <style>
-    :root {
-      --primary: #0077b6;
-      --accent:  #00b4d8;
-      --dark:    #03045e;
-      --light:   #caf0f8;
-      --white:   #ffffff;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      scroll-behavior: smooth;
-    }
-    /* NAV */
-    nav {
-      background: var(--white);
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: sticky; top:0; z-index:1000;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .logo-placeholder {
-      font-weight: bold; color: var(--dark);
-      border: 2px solid var(--dark);
-      padding: 0.5rem 1rem;
-    }
-    nav ul {
-      display: flex; gap:1rem; list-style:none;
-    }
-    nav a {
-      text-decoration:none; color:var(--dark); font-weight:bold;
-    }
-    /* Selector de idioma */
-    #language-select {
-      margin-left: 1rem;
-      padding: 0.2rem; border:1px solid #ccc; border-radius:4px;
-      background:#fff; font-weight:bold;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative; height:60vh;
-      background: url('img/waves.gif') no-repeat center/cover;
-      display: flex; align-items:center; justify-content:center;
-    }
-    .hero::after {
-      content:''; position:absolute; inset:0;
-      background: rgba(0,0,0,0.4);
-    }
-    .hero .texto {
-      position:relative; z-index:2; text-align:center; color:var(--white);
-    }
-    .hero h1 { font-size:3rem; margin:0; }
-    .hero p  { font-size:1.2rem; margin-top:0.5rem; }
-
-    /* SECCIONES */
-    section {
-      padding:4rem 2rem; max-width:1100px; margin: auto;
-    }
-    section.alt { background: var(--white); }
-    h2 {
-      text-align:center; color:var(--accent);
-      margin-bottom:2rem;
-    }
-
-    /* Valores – flip cards */
-    .values {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:2rem;
-    }
-    .flip-card { perspective:1000px; }
-    .flip-card-inner {
-      position:relative; width:100%; height:250px;
-      transform-style:preserve-3d; transition:transform .6s;
-    }
-    .flip-card:hover .flip-card-inner {
-      transform:rotateY(180deg);
-    }
-    .flip-card-front,
-    .flip-card-back {
-      position:absolute; inset:0; backface-visibility:hidden;
-      display:flex; align-items:center; justify-content:center;
-      padding:1rem; border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.1);
-      background:var(--white);
-    }
-    .flip-card-back {
-      transform:rotateY(180deg);
-      background:var(--accent); color:var(--white);
-    }
-
-    /* Carousels */
-    .splide__slide img {
-      width:100%; height:auto; border-radius:8px;
-    }
-    .splide__slide h4 { margin-top:0.5rem; }
-
-    /* Noticias */
-    #news { background:var(--white); }
-    .news-cards {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:1.5rem;
-    }
-    .news-card {
-      background:var(--white); padding:1.5rem;
-      border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    }
-    .news-card img {
-      width:100%; border-radius:4px; margin-bottom:0.5rem;
-    }
-    .news-card h4 { margin:0 0 0.5rem; }
-    .news-card .date {
-      font-size:0.85rem; color:var(--accent); margin-bottom:0.5rem;
-    }
-    .news-card p { margin:0 0 0.5rem; }
-    .news-card a {
-      text-decoration:none; color:var(--primary); font-weight:bold;
-    }
-
-    /* Video */
-    .video-container {
-      text-align:center; margin-top:2rem;
-    }
-    .video-container iframe {
-      width:100%; max-width:800px; height:450px;
-      border:none; border-radius:8px;
-    }
-
-    /* Contacto */
-    .contact-map, .contact-form {
-      margin-top:2rem;
-    }
-    .contact-form form {
-      display:grid; gap:1rem;
-    }
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
-      padding:0.8rem; border-radius:4px;
-      border:1px solid #ccc; font-size:1rem;
-    }
-    .contact-form button {
-      background:var(--primary); color:var(--white);
-      border:none; cursor:pointer;
-    }
-
-    /* Footer */
-    footer {
-      background:var(--dark); color:var(--white);
-      text-align:center; padding:1rem;
-    }
+    :root{--primary:#0077b6;--accent:#00b4d8;--dark:#03045e;--light:#caf0f8;--white:#fff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Roboto',sans-serif;background:var(--light);color:var(--dark);scroll-behavior:smooth;}
+    nav{background:var(--white);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;box-shadow:0 2px 8px rgba(0,0,0,.1);}
+    .logo-placeholder{font-weight:bold;color:var(--dark);border:2px solid var(--dark);padding:.5rem 1rem;}
+    nav ul{display:flex;gap:1rem;list-style:none;}
+    nav a{color:var(--dark);text-decoration:none;font-weight:bold;}
+    #language-select{margin-left:1rem;padding:.2rem;border:1px solid #ccc;border-radius:4px;background:#fff;font-weight:bold;}
+    .hero{position:relative;height:60vh;background:url('img/waves.gif') center/cover no-repeat;display:flex;align-items:center;justify-content:center;}
+    .hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.4);}
+    .hero .texto{position:relative;z-index:2;text-align:center;color:var(--white);}
+    section{padding:4rem 2rem;max-width:1100px;margin:auto;}
+    section.alt{background:var(--white);}
+    h2{text-align:center;color:var(--accent);margin-bottom:2rem;}
+    .values{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}
+    .flip-card{perspective:1000px;}
+    .flip-card-inner{position:relative;width:100%;height:250px;transition:transform .6s;transform-style:preserve-3d;}
+    .flip-card:hover .flip-card-inner{transform:rotateY(180deg);}
+    .flip-card-front,.flip-card-back{position:absolute;inset:0;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;padding:1rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1);background:var(--white);}
+    .flip-card-back{transform:rotateY(180deg);background:var(--accent);color:var(--white);}
+    .splide__slide img{border-radius:8px;width:100%;height:auto;}
+    #news{background:var(--white);}
+    .news-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;}
+    .news-card{background:var(--white);padding:1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);}
+    .news-card img{width:100%;border-radius:4px;margin-bottom:.5rem;}
+    .video-container{text-align:center;margin-top:2rem;}
+    .video-container iframe{width:100%;max-width:800px;height:450px;border:none;border-radius:8px;}
+    .contact-form form{display:grid;gap:1rem;}
+    .contact-form input,.contact-form textarea,.contact-form button{padding:.8rem;border-radius:4px;border:1px solid #ccc;font-size:1rem;}
+    .contact-form button{background:var(--primary);color:var(--white);border:none;cursor:pointer;}
+    footer{background:var(--dark);color:var(--white);text-align:center;padding:1rem;}
   </style>
 </head>
 <body>
-
-  <!-- NAV con selector de idioma -->
   <nav>
     <div class="logo-placeholder">WaveWatt</div>
     <ul>
-      <li><a href="#hero">Inicio</a></li>
-      <li><a href="#about">Quiénes somos</a></li>
-      <li><a href="#values">Valores</a></li>
-      <li><a href="#team">Equipo</a></li>
-      <li><a href="#news">Noticias</a></li>
-      <li><a href="#awards">Premios</a></li>
-      <li><a href="#video">Vídeo</a></li>
-      <li><a href="#contact">Contacto</a></li>
+      <li><a href="#hero" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="#about" data-i18n="nav.about">Quiénes somos</a></li>
+      <li><a href="#values" data-i18n="nav.values">Valores</a></li>
+      <li><a href="#team" data-i18n="nav.team">Equipo</a></li>
+      <li><a href="#news" data-i18n="nav.news">Noticias</a></li>
+      <li><a href="#awards" data-i18n="nav.awards">Premios</a></li>
+      <li><a href="#video" data-i18n="nav.video">Vídeo</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
     </ul>
-    <select id="language-select" aria-label="Seleccione idioma">
+    <select id="language-select" aria-label="Select language">
       <option value="es">ES</option>
       <option value="en">EN</option>
       <option value="ca">CA</option>
@@ -190,194 +65,196 @@
   <!-- Hero -->
   <section id="hero" class="hero">
     <div class="texto animate__animated animate__fadeInDown">
-      <h1>Impulsando el futuro con energía del mar</h1>
-      <p>Innovación. Sostenibilidad. Acción.</p>
+      <h1 data-i18n="hero.title">Impulsando el futuro con energía del mar</h1>
+      <p data-i18n="hero.subtitle">Innovación. Sostenibilidad. Acción.</p>
     </div>
   </section>
 
   <!-- About -->
   <section id="about" class="alt">
-    <div style="display:flex; align-items:center; gap:2rem;">
+    <div style="display:flex;gap:2rem;align-items:center;">
       <div style="flex:1;">
-        <h2 style="text-transform:uppercase; font-size:2rem; color:var(--accent); margin-bottom:1rem;">
-          Quiénes Somos
-        </h2>
-        <p style="font-size:1rem; line-height:1.6;">
-          En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible.
-          Somos ingenieros comprometidos con la innovación y el respeto al medio ambiente.
+        <h2 data-i18n="about.title">Quiénes Somos</h2>
+        <p data-i18n="about.text">
+          En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible. Somos ingenieros comprometidos con la innovación y el respeto al medio ambiente.
         </p>
       </div>
       <div style="flex:1;">
-        <img src="img/equipo.jpg" alt="Equipo WaveWatt"
-             style="width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
+        <img src="img/equipo.jpg" alt="Equipo WaveWatt" style="width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);"/>
       </div>
     </div>
   </section>
 
-  <!-- Valores -->
+  <!-- Values -->
   <section id="values">
-    <h2>Nuestra Misión, Visión y Valores</h2>
+    <h2 data-i18n="values.title">Nuestra Misión, Visión y Valores</h2>
     <div class="values">
       <div class="flip-card">
         <div class="flip-card-inner">
-          <div class="flip-card-front"><h3>Misión</h3></div>
-          <div class="flip-card-back">
-            <p>Acelerar la transición energética mediante soluciones marinas innovadoras y responsables.</p>
-          </div>
+          <div class="flip-card-front"><h3 data-i18n="values.mission.head">Misión</h3></div>
+          <div class="flip-card-back"><p data-i18n="values.mission.body">Acelerar la transición energética mediante soluciones marinas innovadoras y responsables.</p></div>
         </div>
       </div>
       <div class="flip-card">
         <div class="flip-card-inner">
-          <div class="flip-card-front"><h3>Visión</h3></div>
-          <div class="flip-card-back">
-            <p>Ser líderes globales en energías oceánicas limpias, empoderando comunidades.</p>
-          </div>
+          <div class="flip-card-front"><h3 data-i18n="values.vision.head">Visión</h3></div>
+          <div class="flip-card-back"><p data-i18n="values.vision.body">Ser líderes globales en energías oceánicas limpias, empoderando comunidades.</p></div>
         </div>
       </div>
       <div class="flip-card">
         <div class="flip-card-inner">
-          <div class="flip-card-front"><h3>Valores</h3></div>
-          <div class="flip-card-back">
-            <p>Innovación, sostenibilidad, colaboración y excelencia técnica.</p>
-          </div>
+          <div class="flip-card-front"><h3 data-i18n="values.values.head">Valores</h3></div>
+          <div class="flip-card-back"><p data-i18n="values.values.body">Innovación, sostenibilidad, colaboración y excelencia técnica.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Equipo -->
+  <!-- Team -->
   <section id="team" class="alt">
-    <h2>Nuestro Equipo</h2>
+    <h2 data-i18n="team.title">Nuestro Equipo</h2>
     <div id="team-carousel" class="splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="img/pau.jfif" alt="Pau Sabater"/><h4>Pau Sabater</h4><p>Ing. Industrial, UPC & Máster Automoción.</p>
-          </li>
-          <li class="splide__slide">
-            <img src="img/valeria.jfif" alt="Valeria Lizet Landa"/><h4>Valeria Lizet Landa</h4><p>Ing. Eléctrica & Máster URV.</p>
-          </li>
-          <li class="splide__slide">
-            <img src="img/karla.jfif" alt="Karla Andreina Vergel"/><h4>Karla Andreina Vergel</h4><p>Ing. Eléctrica & Máster Industrial URV.</p>
-          </li>
-          <li class="splide__slide">
-            <img src="img/felipe.jfif" alt="Juan Felipe Gil"/><h4>Juan Felipe Gil</h4><p>Ing. Eléctrica & Máster Industrial.</p>
-          </li>
-          <li class="splide__slide">
-            <img src="img/javi.jpg" alt="Javier Pérez"/><h4>Javier Pérez</h4><p>Ing. Energía & Máster Industrial.</p>
-          </li>
-        </ul>
-      </div>
+      <div class="splide__track"><ul class="splide__list">
+        <li class="splide__slide"><img src="img/pau.jfif" alt="Pau Sabater"/><h4>Pau Sabater</h4><p>Ing. Industrial, UPC & Máster Automoción.</p></li>
+        <li class="splide__slide"><img src="img/valeria.jfif" alt="Valeria Lizet Landa"/><h4>Valeria Lizet Landa</h4><p>Ing. Eléctrica & Máster URV.</p></li>
+        <li class="splide__slide"><img src="img/karla.jfif" alt="Karla Andreina Vergel"/><h4>Karla Andreina Vergel</h4><p>Ing. Eléctrica & Máster Industrial URV.</p></li>
+        <li class="splide__slide"><img src="img/felipe.jfif" alt="Juan Felipe Gil"/><h4>Juan Felipe Gil</h4><p>Ing. Eléctrica & Máster Industrial.</p></li>
+        <li class="splide__slide"><img src="img/javi.jpg" alt="Javier Pérez"/><h4>Javier Pérez</h4><p>Ing. Energía & Máster Industrial.</p></li>
+      </ul></div>
     </div>
   </section>
 
-  <!-- Noticias -->
+  <!-- News -->
   <section id="news">
-    <h2>Últimas Noticias</h2>
+    <h2 data-i18n="news.title">Últimas Noticias</h2>
     <div class="news-cards">
-      <div class="news-card">
-        <a href="https://www.fullsdenginyeria.cat/una-boia-generar-energia-amb-la-forca-de-les-ones-guanya-lengihack" target="_blank">
-          <img src="img/noticiaengihack1.jpg" alt="Preview Engihack"/><h4>Ganadores Engihack Catalunya 2023</h4><p class="date">2023</p>
-        </a>
-      </div>
-      <div class="news-card">
-        <a href="https://www.fullsdenginyeria.cat/de-lengihack-al-futur" target="_blank">
-          <img src="img/noticiaengihack2.jpg" alt="Preview Engihack 2"/><h4>De l’Engihack al futur</h4><p class="date">2023</p><p>Artículo de seguimiento tras la hackatón de Ingeniería.</p>
-        </a>
-      </div>
-      <div class="news-card">
-        <a href="https://tarragonadigital.com/societat/premis-empren-diputacio-tarragona-desena-projectes-emprenedors_2064367_102.html" target="_blank">
-          <img src="img/premisempren1noticia.jpg" alt="Preview Premis Empren"/><h4>Premis Emprèn Tarragona 2024</h4><p class="date">2024</p><p>Diputació de Tarragona premia proyectos emprendedores.</p>
-        </a>
-      </div>
-      <div class="news-card">
-        <a href="https://diaridigital.urv.cat/el-consell-social-de-la-urv-premia-les-idees-emprenedores-mes-innovadores/" target="_blank">
-          <img src="img/premisconsellsocialurv.jpg" alt="Preview Consell Social"/><h4>URV Consell Social premia ideas innovadoras</h4><p class="date">2024</p><p>Reconeixement als guardonats i guardonades durant l’any 2024.</p>
-        </a>
-      </div>
-      <div class="news-card">
-        <a href="https://www.fundaciogresol.cat/premis-gresol-jove-2025" target="_blank">
-          <img src="img/premisgresolnoticia.jpg" alt="Preview Premis Gresol"/><h4>Premis Gresol Jove 2025</h4><p class="date">2025</p><p>Ganadores Premis Gresol Jove 2025.</p>
-        </a>
-      </div>
+      <!-- aquí tus tarjetas -->
     </div>
   </section>
 
-  <!-- Premios -->
+  <!-- Awards -->
   <section id="awards" class="alt">
-    <h2>Premios y Reconocimientos</h2>
-    <div id="awards-carousel" class="splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide"><img src="img/engihacklogo.jpg" alt="Engihack 2023"/><h4>Engihack 2023</h4><p>Ganadores Engihack Catalunya.</p></li>
-          <li class="splide__slide"><img src="img/premioideasinnovadoras.png" alt="Ideas Innovadoras 2024"/><h4>Premis Idees Innovadoras 2024</h4><p>Finalistas top 10 entre 300 proyectos.</p></li>
-          <li class="splide__slide"><img src="img/URVconsellsocial.png" alt="URV Consell Social 2024"/><h4>URV Consell Social 2024</h4><p>Ganadores concurso Ideas Innovadoras.</p></li>
-          <li class="splide__slide"><img src="img/startsudstudio.png" alt="Startsudstudio 2024"/><h4>Startsudstudio 2024</h4><p>Primer acuerdo con incubadora.</p></li>
-          <li class="splide__slide"><img src="img/premis_empren.jpg" alt="Premis Emprèn Tarragona 2024"/><h4>Premis Emprèn Tarragona 2024</h4><p>Ganadores Entrenamiento Emprendedor.</p></li>
-          <li class="splide__slide"><img src="img/premisgresol.jpg" alt="Premis Gresol Jove 2025"/><h4>Premis Gresol Jove 2025</h4><p>Ganadores Gresol Jove.</p></li>
-          <li class="splide__slide"><img src="img/upc.jpg" alt="Consell Social 2025"/><h4>Reconocimiento Consell Social 2025</h4><p>Reconeixement als guardonats i guardonades durant l’any 2024.</p></li>
-        </ul>
-      </div>
-    </div>
+    <h2 data-i18n="awards.title">Premios y Reconocimientos</h2>
+    <div id="awards-carousel" class="splide"><div class="splide__track"><ul class="splide__list">
+      <!-- tus slides -->
+    </ul></div></div>
   </section>
 
-  <!-- Vídeo -->
+  <!-- Video -->
   <section id="video">
-    <h2>Vídeo</h2>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/xfHAqZkzDG4" allowfullscreen loading="lazy"></iframe>
-    </div>
+    <h2 data-i18n="video.title">Vídeo</h2>
+    <div class="video-container"><iframe src="https://www.youtube.com/embed/xfHAqZkzDG4" allowfullscreen loading="lazy"></iframe></div>
   </section>
 
-  <!-- Contacto -->
+  <!-- Contact -->
   <section id="contact" class="alt">
-    <h2>Contacto</h2>
-    <p style="text-align:center;">Tarragona, España</p>
-    <div class="contact-map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.115652291344!2d1.238813415102004!3d41.11888207800382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a3519cdef0123%3A0xabcdef1234567890!2sTarragona!5e0!3m2!1ses!2ses!4v0000000000000"
-        width="100%" height="300" style="border:0;border-radius:8px;" allowfullscreen loading="lazy">
-      </iframe>
-    </div>
+    <h2 data-i18n="contact.title">Contacto</h2>
+    <p data-i18n="contact.address" style="text-align:center;">Tarragona, España</p>
+    <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=…" width="100%" height="300" style="border:0;border-radius:8px;" allowfullscreen loading="lazy"></iframe></div>
     <div class="contact-form">
       <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text" name="name" placeholder="Nombre" required/>
-        <input type="email" name="_replyto" placeholder="Correo electrónico" required/>
-        <textarea name="message" rows="4" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar Mensaje</button>
+        <input data-i18n-placeholder="contact.form.name" type="text" name="name" placeholder="Nombre" required/>
+        <input data-i18n-placeholder="contact.form.email" type="email" name="_replyto" placeholder="Correo electrónico" required/>
+        <textarea data-i18n-placeholder="contact.form.message" name="message" rows="4" placeholder="Mensaje" required></textarea>
+        <button type="submit" data-i18n="contact.form.submit">Enviar Mensaje</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 WaveWatt. Todos los derechos reservados.</p>
-  </footer>
+  <footer><p data-i18n="footer.text">&copy; 2025 WaveWatt. Todos los derechos reservados.</p></footer>
 
-  <!-- Scripts: Splide, ScrollReveal y cambio de idioma -->
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', ()=> {
-      // Carousels y animaciones
-      new Splide('#team-carousel',{ type:'loop', perPage:3, gap:'1rem', autoplay:true }).mount();
-      new Splide('#awards-carousel',{ type:'loop', perPage:3, gap:'1rem', autoplay:true }).mount();
-      ScrollReveal().reveal('section',{ distance:'50px', duration:800, origin:'bottom', interval:200 });
+    // Diccionario de traducciones
+    const TRANSLATIONS = {
+      es: {
+        "meta.title": "WaveWatt | Por una energía más limpia",
+        "nav.home": "Inicio",             "nav.about": "Quiénes somos",
+        "nav.values": "Valores",         "nav.team": "Equipo",
+        "nav.news": "Noticias",          "nav.awards": "Premios",
+        "nav.video": "Vídeo",            "nav.contact": "Contacto",
+        "hero.title": "Impulsando el futuro con energía del mar",
+        "hero.subtitle": "Innovación. Sostenibilidad. Acción.",
+        "about.title": "Quiénes Somos",
+        "about.text": "En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible. Somos ingenieros comprometidos con la innovación y el respeto al medio ambiente.",
+        "values.title":"Nuestra Misión, Visión y Valores",
+        "values.mission.head":"Misión","values.mission.body":"Acelerar la transición energética mediante soluciones marinas innovadoras y responsables.",
+        "values.vision.head":"Visión","values.vision.body":"Ser líderes globales en energías oceánicas limpias, empoderando comunidades.",
+        "values.values.head":"Valores","values.values.body":"Innovación, sostenibilidad, colaboración y excelencia técnica.",
+        "team.title":"Nuestro Equipo",
+        "news.title":"Últimas Noticias",
+        "awards.title":"Premios y Reconocimientos",
+        "video.title":"Vídeo",
+        "contact.title":"Contacto","contact.address":"Tarragona, España",
+        "contact.form.name":"Nombre","contact.form.email":"Correo electrónico","contact.form.message":"Mensaje","contact.form.submit":"Enviar Mensaje",
+        "footer.text":"© 2025 WaveWatt. Todos los derechos reservados."
+      },
+      en: {
+        "meta.title": "WaveWatt | For Cleaner Ocean Energy",
+        "nav.home":"Home","nav.about":"About Us","nav.values":"Values","nav.team":"Team","nav.news":"News","nav.awards":"Awards","nav.video":"Video","nav.contact":"Contact",
+        "hero.title":"Powering the Future with Ocean Energy","hero.subtitle":"Innovation. Sustainability. Action.",
+        "about.title":"About Us","about.text":"At WaveWatt we turn ocean energy into clean, sustainable electricity. We’re engineers committed to innovation and environmental stewardship.",
+        "values.title":"Our Mission, Vision & Values",
+        "values.mission.head":"Mission","values.mission.body":"Accelerate the energy transition with innovative and responsible marine solutions.",
+        "values.vision.head":"Vision","values.vision.body":"Lead the world in clean ocean energy, empowering communities globally.",
+        "values.values.head":"Values","values.values.body":"Innovation, sustainability, collaboration, and technical excellence.",
+        "team.title":"Our Team","news.title":"Latest News","awards.title":"Awards & Recognitions","video.title":"Video",
+        "contact.title":"Contact","contact.address":"Tarragona, Spain",
+        "contact.form.name":"Name","contact.form.email":"Email address","contact.form.message":"Message","contact.form.submit":"Send Message",
+        "footer.text":"© 2025 WaveWatt. All rights reserved."
+      },
+      ca: {
+        "meta.title":"WaveWatt | Per una energia més neta de l’oceà",
+        "nav.home":"Inici","nav.about":"Qui som","nav.values":"Valors","nav.team":"Equip","nav.news":"Notícies","nav.awards":"Premis","nav.video":"Vídeo","nav.contact":"Contacte",
+        "hero.title":"Impulsant el futur amb energia marinha","hero.subtitle":"Innovació. Sostenibilitat. Acció.",
+        "about.title":"Qui som","about.text":"A WaveWatt transformem l’energia de l’oceà en electricitat neta i sostenible. Som enginyers compromesos amb la innovació i el respecte al medi ambient.",
+        "values.title":"La nostra Missió, Visió i Valors",
+        "values.mission.head":"Missió","values.mission.body":"Accelerar la transició energètica amb solucions marines innovadores i responsables.",
+        "values.vision.head":"Visió","values.vision.body":"Ser líders mundials en energia neta de l’oceà, empoderant comunitats.",
+        "values.values.head":"Valors","values.values.body":"Innovació, sostenibilitat, col·laboració i excel·lència tècnica.",
+        "team.title":"El nostre Equip","news.title":"Últimes Notícies","awards.title":"Premis i Reconeixements","video.title":"Vídeo",
+        "contact.title":"Contacte","contact.address":"Tarragona, Espanya",
+        "contact.form.name":"Nom","contact.form.email":"Correu electrònic","contact.form.message":"Missatge","contact.form.submit":"Enviar Missatge",
+        "footer.text":"© 2025 WaveWatt. Tots els drets reservats."
+      }
+    };
 
-      // Switcher de idioma
-      const sel  = document.getElementById('language-select');
-      sel.addEventListener('change', ()=> {
-        if      (sel.value==='es') window.location.href = '/';
-        else if (sel.value==='en') window.location.href = '/en/index.html';
-        else if (sel.value==='ca') window.location.href = '/ca/index.html';
+    // Función que aplica un idioma
+    function applyLanguage(lang){
+      document.documentElement.lang = lang;
+      Object.entries(TRANSLATIONS[lang]).forEach(([key,val])=>{
+        // title<meta>
+        if(key==="meta.title"){
+          document.querySelector("title").textContent = val;
+          return;
+        }
+        // placeholders
+        document.querySelectorAll(`[data-i18n-placeholder="${key}"]`)
+          .forEach(el=>el.placeholder = val);
+        // elementos con data-i18n
+        document.querySelectorAll(`[data-i18n="${key}"]`)
+          .forEach(el=>el.textContent = val);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded',()=>{
+      const sel = document.getElementById('language-select');
+      // al cargar, marcamos el idioma guardado o ES
+      const stored = localStorage.getItem('lang') || 'es';
+      sel.value = stored;
+      applyLanguage(stored);
+
+      sel.addEventListener('change',()=>{
+        const lang = sel.value;
+        localStorage.setItem('lang', lang);
+        applyLanguage(lang);
       });
 
-      // Preseleccionar según la ruta actual
-      const p = location.pathname;
-      if      (p.startsWith('/en/')) sel.value = 'en';
-      else if (p.startsWith('/ca/')) sel.value = 'ca';
-      else                           sel.value = 'es';
+      // inicia Splide & ScrollReveal
+      new Splide('#team-carousel',{ type:'loop', perPage:3, autoplay:true }).mount();
+      new Splide('#awards-carousel',{ type:'loop', perPage:3, autoplay:true }).mount();
+      ScrollReveal().reveal('section',{ distance:'50px', duration:800, origin:'bottom', interval:200 });
     });
   </script>
 </body>
 </html>
+
