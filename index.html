@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"/>
 
   <style>
-    /* --- aquí va TODO tu css tal cual lo tienes --- */
+    /* --- tu CSS original --- */
     :root {
       --primary: #0077b6;
       --accent:  #00b4d8;
@@ -226,7 +226,26 @@
             <h4 data-i18n="team.pau.name">Pau Sabater</h4>
             <p data-i18n="team.pau.role">Ing. Industrial, UPC & Máster Automoción.</p>
           </li>
-          <!-- repite para cada miembro -->
+          <li class="splide__slide">
+            <img src="img/valeria.jfif" alt="Valeria Lizet Landa"/>
+            <h4 data-i18n="team.valeria.name">Valeria Lizet Landa</h4>
+            <p data-i18n="team.valeria.role">Ing. Eléctrica & Máster URV.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/karla.jfif" alt="Karla Andreina Vergel"/>
+            <h4 data-i18n="team.karla.name">Karla Andreina Vergel</h4>
+            <p data-i18n="team.karla.role">Ing. Eléctrica & Máster Industrial URV.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/felipe.jfif" alt="Juan Felipe Gil"/>
+            <h4 data-i18n="team.felipe.name">Juan Felipe Gil</h4>
+            <p data-i18n="team.felipe.role">Ing. Eléctrica & Máster Industrial.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/javi.jpg" alt="Javier Pérez"/>
+            <h4 data-i18n="team.javi.name">Javier Pérez</h4>
+            <p data-i18n="team.javi.role">Ing. Energía & Máster Industrial.</p>
+          </li>
         </ul>
       </div>
     </div>
@@ -236,7 +255,53 @@
   <section id="news">
     <h2 data-i18n="news.heading">Últimas Noticias</h2>
     <div class="news-cards">
-      <!-- Tus cards con img, título, fecha y descripción -->
+      <!-- Card 1 -->
+      <div class="news-card">
+        <a href="https://www.fullsdenginyeria.cat/una-boia-generar-energia-amb-la-forca-de-les-ones-guanya-lengihack"
+           target="_blank">
+          <img src="img/noticiaengihack1.jpg" alt="Engihack 1" />
+          <h4 data-i18n="news.cards.1.title">Ganadores Engihack Catalunya 2023</h4>
+          <p class="date" data-i18n="news.cards.1.date">2023</p>
+        </a>
+      </div>
+      <!-- Card 2 -->
+      <div class="news-card">
+        <a href="https://www.fullsdenginyeria.cat/de-lengihack-al-futur" target="_blank">
+          <img src="img/noticiaengihack2.jpg" alt="Engihack 2" />
+          <h4 data-i18n="news.cards.2.title">De l’Engihack al futur</h4>
+          <p class="date" data-i18n="news.cards.2.date">2023</p>
+          <p data-i18n="news.cards.2.desc">Artículo de seguimiento tras la hackatón de Ingeniería.</p>
+        </a>
+      </div>
+      <!-- Card 3 -->
+      <div class="news-card">
+        <a href="https://tarragonadigital.com/societat/premis-empren-diputacio-tarragona-desena-projectes-emprenedors_2064367_102.html"
+           target="_blank">
+          <img src="img/premisempren1noticia.jpg" alt="Premis Empren Tarragona" />
+          <h4 data-i18n="news.cards.3.title">Premis Emprèn Tarragona 2024</h4>
+          <p class="date" data-i18n="news.cards.3.date">2024</p>
+          <p data-i18n="news.cards.3.desc">Diputació de Tarragona premia proyectos emprendedores.</p>
+        </a>
+      </div>
+      <!-- Card 4 -->
+      <div class="news-card">
+        <a href="https://diaridigital.urv.cat/el-consell-social-de-la-urv-premia-les-idees-emprenedores-mes-innovadores/"
+           target="_blank">
+          <img src="img/premisconsellsocialurv.jpg" alt="Consell Social URV" />
+          <h4 data-i18n="news.cards.4.title">URV Consell Social premia ideas innovadoras</h4>
+          <p class="date" data-i18n="news.cards.4.date">2024</p>
+          <p data-i18n="news.cards.4.desc">Reconeixement als guardonats i guardonades durant l’any 2024.</p>
+        </a>
+      </div>
+      <!-- Card 5 -->
+      <div class="news-card">
+        <a href="https://www.fundaciogresol.cat/premis-gresol-jove-2025" target="_blank">
+          <img src="img/premisgresolnoticia.jpg" alt="Premis Gresol Jove" />
+          <h4 data-i18n="news.cards.5.title">Premis Gresol Jove 2025</h4>
+          <p class="date" data-i18n="news.cards.5.date">2025</p>
+          <p data-i18n="news.cards.5.desc">Ganadores Premis Gresol Jove 2025.</p>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -246,7 +311,41 @@
     <div id="awards-carousel" class="splide">
       <div class="splide__track">
         <ul class="splide__list">
-          <!-- Tus slides -->
+          <li class="splide__slide">
+            <img src="img/engihacklogo.jpg" alt="Engihack 2023" />
+            <h4 data-i18n="awards.cards.1.title">Engihack 2023</h4>
+            <p data-i18n="awards.cards.1.desc">Ganadores Engihack Catalunya.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/premioideasinnovadoras.png" alt="Ideas Innovadoras 2024" />
+            <h4 data-i18n="awards.cards.2.title">Premis Idees Innovadores 2024</h4>
+            <p data-i18n="awards.cards.2.desc">Finalistas top 10 entre 300 proyectos.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/URVconsellsocial.png" alt="URV Consell Social 2024" />
+            <h4 data-i18n="awards.cards.3.title">URV Consell Social 2024</h4>
+            <p data-i18n="awards.cards.3.desc">Ganadores concurso Ideas Innovadoras.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/startsudstudio.png" alt="Startsudstudio 2024" />
+            <h4 data-i18n="awards.cards.4.title">Startsudstudio 2024</h4>
+            <p data-i18n="awards.cards.4.desc">Primer acuerdo con incubadora.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/premis_empren.jpg" alt="Premis Emprèn Tarragona 2024" />
+            <h4 data-i18n="awards.cards.5.title">Premis Emprèn Tarragona 2024</h4>
+            <p data-i18n="awards.cards.5.desc">Ganadores Entrenamiento Emprendedor.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/premisgresol.jpg" alt="Premis Gresol Jove 2025" />
+            <h4 data-i18n="awards.cards.6.title">Premis Gresol Jove 2025</h4>
+            <p data-i18n="awards.cards.6.desc">Ganadores Gresol Jove.</p>
+          </li>
+          <li class="splide__slide">
+            <img src="img/upc.jpg" alt="Consell Social 2025" />
+            <h4 data-i18n="awards.cards.7.title">Reconocimiento Consell Social 2025</h4>
+            <p data-i18n="awards.cards.7.desc">Reconeixement als guardonats i guardonades durant l’any 2024.</p>
+          </li>
         </ul>
       </div>
     </div>
@@ -265,14 +364,14 @@
     <h2 data-i18n="contact.heading">Contacto</h2>
     <p style="text-align:center;" data-i18n="contact.location">Tarragona, España</p>
     <div class="contact-map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=…"
-        width="100%" height="300" style="border:0;border-radius:8px;" allowfullscreen loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=…"
+              width="100%" height="300" style="border:0;border-radius:8px;"
+              allowfullscreen loading="lazy"></iframe>
     </div>
     <div class="contact-form">
       <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text"    name="name"     data-i18n-placeholder="contact.name"     placeholder="Nombre" required/>
-        <input type="email"   name="_replyto" data-i18n-placeholder="contact.email"    placeholder="Correo electrónico" required/>
+        <input type="text"    name="name" data-i18n-placeholder="contact.name"    placeholder="Nombre" required/>
+        <input type="email"   name="_replyto" data-i18n-placeholder="contact.email" placeholder="Correo electrónico" required/>
         <textarea name="message" rows="4" data-i18n-placeholder="contact.message" placeholder="Mensaje" required></textarea>
         <button type="submit" data-i18n="contact.send">Enviar Mensaje</button>
       </form>
@@ -290,86 +389,126 @@
     // Traducciones
     const TRANSLATIONS = {
       es: {
-        "nav.home":      "Inicio",
-        "nav.about":     "Quiénes somos",
-        "nav.values":    "Valores",
-        "nav.team":      "Equipo",
-        "nav.news":      "Noticias",
-        "nav.awards":    "Premios",
-        "nav.video":     "Vídeo",
-        "nav.contact":   "Contacto",
-        "hero.title":    "Impulsando el futuro con energía del mar",
-        "hero.subtitle": "Innovación. Sostenibilidad. Acción.",
-        /* y así para todos… */
-        "contact.name":     "Nombre",
-        "contact.email":    "Correo electrónico",
-        "contact.message":  "Mensaje",
-        "contact.send":     "Enviar Mensaje",
-        "footer.text":      "© 2025 WaveWatt. Todos los derechos reservados."
+        "nav.home":"Inicio","nav.about":"Quiénes somos","nav.values":"Valores","nav.team":"Equipo","nav.news":"Noticias","nav.awards":"Premios","nav.video":"Vídeo","nav.contact":"Contacto",
+        "hero.title":"Impulsando el futuro con energía del mar","hero.subtitle":"Innovación. Sostenibilidad. Acción.",
+        "about.heading":"Quiénes Somos","about.text":"En WaveWatt, transformamos la energía del océano en electricidad limpia y sostenible. Somos ingenieros comprometidos con la innovación y el respeto al medio ambiente.",
+        "values.heading":"Nuestra Misión, Visión y Valores",
+        "values.mission.title":"Misión","values.mission.text":"Acelerar la transición energética mediante soluciones marinas innovadoras y responsables.",
+        "values.vision.title":"Visión","values.vision.text":"Ser líderes globales en energías oceánicas limpias, empoderando comunidades.",
+        "values.values.title":"Valores","values.values.text":"Innovación, sostenibilidad, colaboración y excelencia técnica.",
+        "team.heading":"Nuestro Equipo",
+        "team.pau.name":"Pau Sabater","team.pau.role":"Ing. Industrial, UPC & Máster Automoción.",
+        "team.valeria.name":"Valeria Lizet Landa","team.valeria.role":"Ing. Eléctrica & Máster URV.",
+        "team.karla.name":"Karla Andreina Vergel","team.karla.role":"Ing. Eléctrica & Máster Industrial URV.",
+        "team.felipe.name":"Juan Felipe Gil","team.felipe.role":"Ing. Eléctrica & Máster Industrial.",
+        "team.javi.name":"Javier Pérez","team.javi.role":"Ing. Energía & Máster Industrial.",
+        "news.heading":"Últimas Noticias",
+        "news.cards.1.title":"Ganadores Engihack Catalunya 2023","news.cards.1.date":"2023",
+        "news.cards.2.title":"De l’Engihack al futur","news.cards.2.date":"2023","news.cards.2.desc":"Artículo de seguimiento tras la hackatón de Ingeniería.",
+        "news.cards.3.title":"Premis Emprèn Tarragona 2024","news.cards.3.date":"2024","news.cards.3.desc":"Diputació de Tarragona premia proyectos emprendedores.",
+        "news.cards.4.title":"URV Consell Social premia ideas innovadoras","news.cards.4.date":"2024","news.cards.4.desc":"Reconeixement als guardonats i guardonades durant l’any 2024.",
+        "news.cards.5.title":"Premis Gresol Jove 2025","news.cards.5.date":"2025","news.cards.5.desc":"Ganadores Premis Gresol Jove 2025.",
+        "awards.heading":"Premios y Reconocimientos",
+        "awards.cards.1.title":"Engihack 2023","awards.cards.1.desc":"Ganadores Engihack Catalunya.",
+        "awards.cards.2.title":"Premis Idees Innovadores 2024","awards.cards.2.desc":"Finalistas top 10 entre 300 proyectos.",
+        "awards.cards.3.title":"URV Consell Social 2024","awards.cards.3.desc":"Ganadores concurso Ideas Innovadoras.",
+        "awards.cards.4.title":"Startsudstudio 2024","awards.cards.4.desc":"Primer acuerdo con incubadora.",
+        "awards.cards.5.title":"Premis Emprèn Tarragona 2024","awards.cards.5.desc":"Ganadores Entrenamiento Emprendedor.",
+        "awards.cards.6.title":"Premis Gresol Jove 2025","awards.cards.6.desc":"Ganadores Gresol Jove.",
+        "awards.cards.7.title":"Reconocimiento Consell Social 2025","awards.cards.7.desc":"Reconeixement als guardonats i guardonades durant l’any 2024.",
+        "video.heading":"Vídeo",
+        "contact.heading":"Contacto","contact.location":"Tarragona, España",
+        "contact.name":"Nombre","contact.email":"Correo electrónico","contact.message":"Mensaje","contact.send":"Enviar Mensaje",
+        "footer.text":"© 2025 WaveWatt. Todos los derechos reservados."
       },
       en: {
-        "nav.home":      "Home",
-        "nav.about":     "About Us",
-        "nav.values":    "Values",
-        "nav.team":      "Team",
-        "nav.news":      "News",
-        "nav.awards":    "Awards",
-        "nav.video":     "Video",
-        "nav.contact":   "Contact",
-        "hero.title":    "Powering the Future with Ocean Energy",
-        "hero.subtitle": "Innovation. Sustainability. Action.",
-        /* … */
-        "contact.name":     "Name",
-        "contact.email":    "Email address",
-        "contact.message":  "Message",
-        "contact.send":     "Send Message",
-        "footer.text":      "© 2025 WaveWatt. All rights reserved."
+        "nav.home":"Home","nav.about":"About Us","nav.values":"Values","nav.team":"Team","nav.news":"News","nav.awards":"Awards","nav.video":"Video","nav.contact":"Contact",
+        "hero.title":"Powering the Future with Ocean Energy","hero.subtitle":"Innovation. Sustainability. Action.",
+        "about.heading":"About Us","about.text":"At WaveWatt we turn ocean energy into clean, sustainable electricity. We’re engineers committed to innovation and environmental stewardship.",
+        "values.heading":"Our Mission, Vision & Values",
+        "values.mission.title":"Mission","values.mission.text":"Accelerate the energy transition with innovative and responsible marine solutions.",
+        "values.vision.title":"Vision","values.vision.text":"Lead the world in clean ocean energy, empowering communities globally.",
+        "values.values.title":"Values","values.values.text":"Innovation, sustainability, collaboration, and technical excellence.",
+        "team.heading":"Our Team",
+        "team.pau.name":"Pau Sabater","team.pau.role":"Industrial Engineer, UPC & Master in Automotive.",
+        "team.valeria.name":"Valeria Lizet Landa","team.valeria.role":"Electrical Engineer & Master URV.",
+        "team.karla.name":"Karla Andreina Vergel","team.karla.role":"Electrical Engineer & Industrial Master URV.",
+        "team.felipe.name":"Juan Felipe Gil","team.felipe.role":"Electrical Engineer & Industrial Master.",
+        "team.javi.name":"Javier Pérez","team.javi.role":"Energy Engineer & Industrial Master.",
+        "news.heading":"Latest News",
+        "news.cards.1.title":"Engihack Winners 2023","news.cards.1.date":"2023",
+        "news.cards.2.title":"From Engihack to the Future","news.cards.2.date":"2023","news.cards.2.desc":"Follow-up article after the Engihack hackathon.",
+        "news.cards.3.title":"Emprèn Tarragona Awards 2024","news.cards.3.date":"2024","news.cards.3.desc":"Diputació de Tarragona recognizes entrepreneurial projects.",
+        "news.cards.4.title":"URV Social Council Awards 2024","news.cards.4.date":"2024","news.cards.4.desc":"Recognition of awardees during 2024.",
+        "news.cards.5.title":"Gresol Youth Awards 2025","news.cards.5.date":"2025","news.cards.5.desc":"Winners of the Gresol Youth Awards.",
+        "awards.heading":"Awards & Recognitions",
+        "awards.cards.1.title":"Engihack 2023","awards.cards.1.desc":"Engihack Catalunya Winners.",
+        "awards.cards.2.title":"Innovative Ideas Awards 2024","awards.cards.2.desc":"Top-10 finalists among 300 projects.",
+        "awards.cards.3.title":"URV Social Council 2024","awards.cards.3.desc":"Social Council recognition 2024.",
+        "awards.cards.4.title":"Startsudstudio 2024","awards.cards.4.desc":"First incubator partnership.",
+        "awards.cards.5.title":"Emprèn Tarragona Awards 2024","awards.cards.5.desc":"Entrepreneurship training winners.",
+        "awards.cards.6.title":"Gresol Youth Awards 2025","awards.cards.6.desc":"Youth Awards winners.",
+        "awards.cards.7.title":"Social Council Recognition 2025","awards.cards.7.desc":"Recognizing 2024 awardees.",
+        "video.heading":"Video",
+        "contact.heading":"Contact","contact.location":"Tarragona, Spain",
+        "contact.name":"Name","contact.email":"Email address","contact.message":"Message","contact.send":"Send Message",
+        "footer.text":"© 2025 WaveWatt. All rights reserved."
       },
       ca: {
-        "nav.home":      "Inici",
-        "nav.about":     "Qui som",
-        "nav.values":    "Valors",
-        "nav.team":      "Equip",
-        "nav.news":      "Notícies",
-        "nav.awards":    "Premis",
-        "nav.video":     "Vídeo",
-        "nav.contact":   "Contacte",
-        "hero.title":    "Impulsant el futur amb energia del mar",
-        "hero.subtitle": "Innovació. Sostenibilitat. Acció.",
-        /* … */
-        "contact.name":     "Nom",
-        "contact.email":    "Correu electrònic",
-        "contact.message":  "Missatge",
-        "contact.send":     "Enviar Missatge",
-        "footer.text":      "© 2025 WaveWatt. Tots els drets reservats."
+        "nav.home":"Inici","nav.about":"Qui som","nav.values":"Valors","nav.team":"Equip","nav.news":"Notícies","nav.awards":"Premis","nav.video":"Vídeo","nav.contact":"Contacte",
+        "hero.title":"Impulsant el futur amb energia del mar","hero.subtitle":"Innovació. Sostenibilitat. Acció.",
+        "about.heading":"Qui som","about.text":"A WaveWatt transformem l’energia de l’oceà en electricitat neta i sostenible. Som enginyers compromesos amb la innovació i el respecte pel medi ambient.",
+        "values.heading":"La nostra Missió, Visió i Valors",
+        "values.mission.title":"Missió","values.mission.text":"Accelerar la transició energètica amb solucions marines innovadores i responsables.",
+        "values.vision.title":"Visió","values.vision.text":"Ser líders mundials en energia oceànica neta, empoderant comunitats.",
+        "values.values.title":"Valors","values.values.text":"Innovació, sostenibilitat, col·laboració i excel·lència tècnica.",
+        "team.heading":"El nostre Equip",
+        "team.pau.name":"Pau Sabater","team.pau.role":"Eng. Industrial, UPC & Màster Automoció.",
+        "team.valeria.name":"Valeria Lizet Landa","team.valeria.role":"Eng. Elèctrica & Màster URV.",
+        "team.karla.name":"Karla Andreina Vergel","team.karla.role":"Eng. Elèctrica & Màster Industrial URV.",
+        "team.felipe.name":"Juan Felipe Gil","team.felipe.role":"Eng. Elèctrica & Màster Industrial.",
+        "team.javi.name":"Javier Pérez","team.javi.role":"Eng. Energia & Màster Industrial.",
+        "news.heading":"Últimes Notícies",
+        "news.cards.1.title":"Guanyadors Engihack 2023","news.cards.1.date":"2023",
+        "news.cards.2.title":"De l’Engihack al futur","news.cards.2.date":"2023","news.cards.2.desc":"Article de seguiment després de la hackató d’enginyeria.",
+        "news.cards.3.title":"Premis Emprèn Tarragona 2024","news.cards.3.date":"2024","news.cards.3.desc":"Diputació de Tarragona premia projectes emprenedors.",
+        "news.cards.4.title":"Consell Social URV 2024","news.cards.4.date":"2024","news.cards.4.desc":"Reconeixement als guardonats durant 2024.",
+        "news.cards.5.title":"Premis Gresol Jove 2025","news.cards.5.date":"2025","news.cards.5.desc":"Guanyadors dels Premis Gresol Jove 2025.",
+        "awards.heading":"Premis i Reconeixements",
+        "awards.cards.1.title":"Engihack 2023","awards.cards.1.desc":"Guanyadors Engihack Catalunya.",
+        "awards.cards.2.title":"Premis Idees Innovadores 2024","awards.cards.2.desc":"Finalistes top-10 entre 300 projectes.",
+        "awards.cards.3.title":"Consell Social URV 2024","awards.cards.3.desc":"Reconeixement Consell Social 2024.",
+        "awards.cards.4.title":"Startsudstudio 2024","awards.cards.4.desc":"Primer acord amb incubadora.",
+        "awards.cards.5.title":"Premis Emprèn Tarragona 2024","awards.cards.5.desc":"Guanyadors Entrenament Emprenedor.",
+        "awards.cards.6.title":"Premis Gresol Jove 2025","awards.cards.6.desc":"Guanyadors Gresol Jove.",
+        "awards.cards.7.title":"Premis Consell Social 2025","awards.cards.7.desc":"Reconeixement als guardonats durant 2024.",
+        "video.heading":"Vídeo",
+        "contact.heading":"Contacte","contact.location":"Tarragona, Espanya",
+        "contact.name":"Nom","contact.email":"Correu electrònic","contact.message":"Missatge","contact.send":"Enviar Missatge",
+        "footer.text":"© 2025 WaveWatt. Tots els drets reservats."
       }
     };
 
-    // Aplica textos según idioma
+    // Aplica traducción
     function applyLanguage(lang) {
-      // innerText
-      document
-        .querySelectorAll("[data-i18n]")
-        .forEach(el => {
-          const key = el.getAttribute("data-i18n");
-          if (TRANSLATIONS[lang][key]) el.innerText = TRANSLATIONS[lang][key];
-        });
-      // placeholders
-      document
-        .querySelectorAll("[data-i18n-placeholder]")
-        .forEach(el => {
-          const key = el.getAttribute("data-i18n-placeholder");
-          if (TRANSLATIONS[lang][key]) el.placeholder = TRANSLATIONS[lang][key];
-        });
-      // marca <html lang="…">
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (TRANSLATIONS[lang][key]) el.innerText = TRANSLATIONS[lang][key];
+      });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (TRANSLATIONS[lang][key]) el.placeholder = TRANSLATIONS[lang][key];
+      });
       document.documentElement.lang = lang;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-      // Inicializa Splide y ScrollReveal
+      // Splide y ScrollReveal
       new Splide("#team-carousel",{ type:"loop", perPage:3, gap:"1rem", autoplay:true }).mount();
       new Splide("#awards-carousel",{ type:"loop", perPage:3, gap:"1rem", autoplay:true }).mount();
       ScrollReveal().reveal("section",{ distance:"50px", duration:800, origin:"bottom", interval:200 });
+
+
 
       // Selector idioma
       const sel = document.getElementById("language-select");
