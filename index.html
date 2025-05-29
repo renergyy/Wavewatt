@@ -16,9 +16,8 @@
       --light:   #caf0f8;
       --white:   #ffffff;
     }
-    *, *::before, *::after { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
     body {
-      margin: 0;
       font-family: 'Roboto', sans-serif;
       background: var(--light);
       color: var(--dark);
@@ -37,21 +36,15 @@
       justify-content: space-between;
     }
     .logo-placeholder {
-      width: 120px;
-      height: 40px;
-      border: 2px solid var(--dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-weight: bold;
       color: var(--dark);
+      border: 2px solid var(--dark);
+      padding: 0.5rem 1rem;
     }
     nav ul {
-      list-style: none;
       display: flex;
       gap: 1rem;
-      margin: 0;
-      padding: 0;
+      list-style: none;
     }
     nav a {
       text-decoration: none;
@@ -166,6 +159,11 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+    .news-card img {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
     .news-card h4 { margin: 0 0 0.5rem; }
     .news-card .date {
       font-size: 0.85rem;
@@ -173,11 +171,6 @@
       margin-bottom: 0.5rem;
     }
     .news-card p { margin: 0 0 0.5rem; }
-    .news-card img {
-      width: 100%;
-      border-radius: 4px;
-      margin-bottom: 0.5rem;
-    }
     .news-card a {
       text-decoration: none;
       color: var(--primary);
@@ -250,7 +243,6 @@
       <option value="en">EN</option>
       <option value="ca">CA</option>
     </select>
-
   </nav>
 
   <!-- Hero -->
@@ -409,7 +401,7 @@
           </li>
           <li class="splide__slide">
             <img src="img/premioideasinnovadoras.png" alt="Ideas Innovadoras 2024"/>
-            <h4>Premis Idees Innovadores 2024</h4>
+            <h4>Premis Idees Innovadoras 2024</h4>
             <p>Finalistas top 10 entre 300 proyectos.</p>
           </li>
           <li class="splide__slide">
@@ -488,23 +480,22 @@
     });
 
     // Cambio de idioma
-    // Cambio de idioma
-  const select = document.getElementById('language-select');
-  select.addEventListener('change', () => {
-    if (select.value === 'es') {
-      window.location.href = window.location.origin + '/';
-    } else if (select.value === 'en') {
-      window.location.href = window.location.origin + '/en/index.html';
-    } else if (select.value === 'ca') {
-      window.location.href = window.location.origin + '/ca/index.html';
-    }
-  });
+    const select = document.getElementById('language-select');
+    select.addEventListener('change', () => {
+      if (select.value === 'es') {
+        window.location.href = '/';
+      } else if (select.value === 'en') {
+        window.location.href = '/en/index.html';
+      } else if (select.value === 'ca') {
+        window.location.href = '/ca/index.html';
+      }
+    });
 
-  // Al cargar, marcar el idioma activo
-  const path = window.location.pathname;
-  if (path.startsWith('/en/')) select.value = 'en';
-  else if (path.startsWith('/ca/')) select.value = 'ca';
-
+    // Al cargar, marcar el idioma activo
+    const path = window.location.pathname;
+    if (path.startsWith('/en/')) select.value = 'en';
+    else if (path.startsWith('/ca/')) select.value = 'ca';
   </script>
 </body>
 </html>
+
