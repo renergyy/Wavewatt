@@ -1,0 +1,23 @@
+nav:
+  inicio:      "Home"
+  quienes:     "About Us"
+  valores:     "Values"
+  equipo:      "Team"
+  noticias:    "News"
+  premios:     "Awards"
+  video:       "Video"
+  contacto:    "Contact"
+
+lang_switcher:
+  label:       "English"
+  target:      "index.es.html"
+
+hero:
+  title:       "Driving the future with ocean energy"
+  subtitle:    "Innovation. Sustainability. Action."
+
+about:
+  heading:     "About Us"
+  text:        "At WaveWatt, we turn ocean energy into clean, sustainable electricity. We are engineers committed to innovation and respect for the environment."
+
+# …y así con todas las secciones, igual que antes…
