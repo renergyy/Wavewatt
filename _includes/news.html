@@ -1,49 +1,21 @@
+{% assign n = site.data.i18n[page.lang].news %}
 <section id="news">
-  <h2>Últimas Noticias</h2>
+  <h2>{{ n.heading }}</h2>
   <div class="news-cards">
-    <div class="news-card">
-      <a href="https://www.fullsdenginyeria.cat/una-boia-generar-energia-amb-la-forca-de-les-ones-guanya-lengihack" target="_blank" style="text-decoration:none;color:inherit;">
-        <img src="img/noticiaengihack1.jpg" alt="Preview Engihack" style="width:100%;border-radius:4px;margin-bottom:.5rem;">
-        <h4>Ganadores Engihack Catalunya 2023</h4>
-        <p class="date">2023</p>
-      </a>
-    </div>
-
-    <div class="news-card">
-      <a href="https://www.fullsdenginyeria.cat/de-lengihack-al-futur" target="_blank" style="text-decoration:none;color:inherit;">
-        <img src="img/noticiaengihack2.jpg" alt="Preview Engihack 2" style="width:100%;border-radius:4px;margin-bottom:.5rem;">
-        <h4>De l’Engihack al futur</h4>
-        <p class="date">2023</p>
-        <p>Artículo de seguimiento tras la hackatón de Ingeniería.</p>
-      </a>
-    </div>
-
-    <div class="news-card">
-      <a href="https://tarragonadigital.com/societat/premis-empren-diputacio-tarragona-desena-projectes-emprenedors_2064367_102.html" target="_blank" style="text-decoration:none;color:inherit;">
-        <img src="img/premisempren1noticia.jpg" alt="Preview Premis Empren" style="width:100%;border-radius:4px;margin-bottom:.5rem;">
-        <h4>Premis Emprèn Tarragona 2024</h4>
-        <p class="date">2024</p>
-        <p>Diputació de Tarragona premia proyectos emprendedores.</p>
-      </a>
-    </div>
-
-    <div class="news-card">
-      <a href="https://diaridigital.urv.cat/el-consell-social-de-la-urv-premia-les-idees-emprenedores-mes-innovadores/" target="_blank" style="text-decoration:none;color:inherit;">
-        <img src="img/premisconsellsocialurv.jpg" alt="Preview Consell Social" style="width:100%;border-radius:4px;margin-bottom:.5rem;">
-        <h4>URV Consell Social premia ideas innovadoras</h4>
-        <p class="date">2024</p>
-        <p>Reconeixement als guardonats i guardonades durant l’any 2024.</p>
-      </a>
-    </div>
-
-    <div class="news-card">
-      <a href="https://www.fundaciogresol.cat/premis-gresol-jove-2025" target="_blank" style="text-decoration:none;color:inherit;">
-        <img src="img/premisgresolnoticia.jpg" alt="Preview Premis Gresol" style="width:100%;border-radius:4px;margin-bottom:.5rem;">
-        <h4>Premis Gresol Jove 2025</h4>
-        <p class="date">2025</p>
-        <p>Ganadores Premis Gresol Jove 2025.</p>
-      </a>
-    </div>
-
+    {% for item in n.items %}
+      <div class="news-card">
+        <a href="{{ item.link }}" target="_blank" style="text-decoration:none; color:inherit;">
+          {% if item.img %}
+            <img src="{{ site.baseurl }}/img/{{ item.img }}" alt="Noticia" style="width:100%; border-radius:4px; margin-bottom:.5rem;">
+          {% endif %}
+          <h4>{{ item.title }}</h4>
+          <p class="date">{{ item.date }}</p>
+          {% if item.excerpt %}
+            <p>{{ item.excerpt }}</p>
+          {% endif %}
+        </a>
+      </div>
+    {% endfor %}
   </div>
 </section>
+
