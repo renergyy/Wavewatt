@@ -1,4 +1,5 @@
 ---
 layout: default
-title: WaveWatt | Por una energía más limpia
+lang: es
+title: "{{ site.data.i18n.es.hero.title }}"
 ---
