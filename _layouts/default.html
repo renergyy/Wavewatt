@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ page.lang }}">
   <head>
     {% include head.html %}
   </head>
   <body>
     {% include nav.html %}
+    {% include lang-switcher.html %}
     <main>
       {% include hero.html %}
       {% include about.html %}
@@ -16,10 +17,9 @@
       {% include contact.html %}
     </main>
     {% include footer.html %}
-     <!-- Librerías JS externas -->
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- Tu script de inicialización -->
-  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
-</body>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+  </body>
 </html>
