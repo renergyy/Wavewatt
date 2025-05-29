@@ -1,13 +1,14 @@
+{% assign t = site.data.i18n[page.lang].nav %}
 <nav>
   <div class="logo-placeholder">WaveWatt</div>
   <ul>
-    <li><a href="#hero">Inicio</a></li>
-    <li><a href="#about">Quiénes somos</a></li>
-    <li><a href="#values">Valores</a></li>
-    <li><a href="#team">Equipo</a></li>
-    <li><a href="#news">Noticias</a></li>
-    <li><a href="#awards">Premios</a></li>
-    <li><a href="#video">Vídeo</a></li>
-    <li><a href="#contact">Contacto</a></li>
+    <li><a href="#hero">{{ t.inicio }}</a></li>
+    <li><a href="#about">{{ t.quienes }}</a></li>
+    <li><a href="#values">{{ t.valores }}</a></li>
+    <li><a href="#team">{{ t.equipo }}</a></li>
+    <li><a href="#news">{{ t.noticias }}</a></li>
+    <li><a href="#awards">{{ t.premios }}</a></li>
+    <li><a href="#video">{{ t.video }}</a></li>
+    <li><a href="#contact">{{ t.contacto }}</a></li>
   </ul>
 </nav>
