@@ -1,13 +1,16 @@
+{% assign t = site.data.i18n[page.lang].team %}
 <section id="team" class="alt">
-  <h2>Nuestro Equipo</h2>
+  <h2>{{ t.heading }}</h2>
   <div id="team-carousel" class="splide">
     <div class="splide__track">
       <ul class="splide__list">
-        <li class="splide__slide"><img src="img/pau.jfif" alt="Pau Sabater"><h4>Pau Sabater</h4><p>Ing. Industrial, UPC & Máster Automoción.</p></li>
-        <li class="splide__slide"><img src="img/valeria.jfif" alt="Valeria Lizet Landa"><h4>Valeria Lizet Landa</h4><p>Ing. Eléctrica & Máster URV.</p></li>
-        <li class="splide__slide"><img src="img/karla.jfif" alt="Karla Andreina Vergel"><h4>Karla Andreina Vergel</h4><p>Ing. Eléctrica & Máster Industrial URV.</p></li>
-        <li class="splide__slide"><img src="img/felipe.jfif" alt="Juan Felipe Gil"><h4>Juan Felipe Gil</h4><p>Ing. Eléctrica & Máster Industrial.</p></li>
-        <li class="splide__slide"><img src="img/javi.jpg" alt="Javier Pérez"><h4>Javier Pérez</h4><p>Ing. Energía & Máster Industrial.</p></li>
+        {% for member in t.members %}
+          <li class="splide__slide">
+            <img src="{{ site.baseurl }}/img/{{ member.img }}" alt="{{ member.name }}">
+            <h4>{{ member.name }}</h4>
+            <p>{{ member.title }}</p>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
