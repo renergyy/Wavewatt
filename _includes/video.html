@@ -1,6 +1,7 @@
+{% assign vid = site.data.i18n[page.lang].video %}
 <section id="video">
-  <h2>Vídeo</h2>
+  <h2>{{ vid.heading }}</h2>
   <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/xfHAqZkzDG4" allowfullscreen loading="lazy"></iframe>
+    <iframe src="{{ vid.src }}" allowfullscreen loading="lazy"></iframe>
   </div>
 </section>
